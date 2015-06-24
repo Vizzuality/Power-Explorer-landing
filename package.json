@@ -1,0 +1,19 @@
+{
+  "name": "wrw-landing",
+  "version": "1.0.0",
+  "description": "A landing page for WRW",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vizzuality/WRW-landing.git"
+  },
+  "author": "Vizzuality",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vizzuality/WRW-landing/issues"
+  },
+  "homepage": "https://github.com/Vizzuality/WRW-landing#readme"
+}
