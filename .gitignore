@@ -1,5 +1,9 @@
 .DS_Store
 .tmp
+.ruby-version
+Gemfile.lock
 node_modules
 bower_components
+.sass-cache
 dist
+

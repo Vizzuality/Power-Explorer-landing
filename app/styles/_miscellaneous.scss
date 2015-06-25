@@ -1,0 +1,14 @@
+.button {
+  display: inline-block;
+  padding: 10px 55px;
+  font-size: $link-size;
+  text-align: center;
+  text-transform: uppercase;
+
+  &.yellow {
+    background-color: $yellow;
+    &:hover {
+      background-color: darken($yellow, 10%);
+    }
+  }
+}

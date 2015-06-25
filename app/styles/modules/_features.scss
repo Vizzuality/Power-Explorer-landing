@@ -1,0 +1,54 @@
+.features {
+  h2 {
+    text-align: center;
+  }
+
+  .features-list {
+
+    .features-item {
+      float: left;
+      width: 50%;
+
+      .features-bg {
+        float: left;
+        width: 175px;
+        height: 156px;
+        &.citizens {
+          background: url('../assets/features/icon-citizens.svg');
+        }
+        &.organisations {
+          background: url('../assets/features/icon-organisations.svg');
+        }
+        &.governments {
+          background: url('../assets/features/icon-governments.svg');
+        }
+        &.researchers {
+          background: url('../assets/features/icon-researchers.svg');
+        }
+        &.developers {
+          background: url('../assets/features/icon-developers.svg');
+        }
+        &.more {
+          background: url('../assets/features/icon-more.svg');
+        }
+      }
+
+      .features-info {
+        float: left;
+        width: calc(100% - 205px);
+        margin-left: 20px;
+
+        p {
+          width: 50%;
+        }
+
+        .learn-more {
+          font-size: $link-size;
+          font-weight: $bold-format;
+          color: $blue;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

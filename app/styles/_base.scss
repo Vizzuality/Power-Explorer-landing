@@ -1,0 +1,48 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', 'Helevetica', sans-serif;
+  font-size: $regular-font-size;
+  line-height: 1;
+
+  .article-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 300px;
+    padding: 75px 0;
+    .row {
+      max-width: $max-width-size;
+      min-width: $min-width-size;
+    }
+    &.introduction {
+      background-color: $black;
+    }
+    &.description, &.partners {
+      background-color: $light-gray;
+    }
+  }
+
+  h2 {
+    font-size: $h2-size;
+    color: $violet;
+    font-weight: $light-format;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+}
+

@@ -1,0 +1,18 @@
+.signals {
+  h2, p {
+    text-align: center;
+  }
+
+  section {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+    .link-signals {
+      font-size: $link-size;
+      text-transform: uppercase;
+      font-weight: $bold-format;
+      color: $green;
+    }
+  }
+}
