@@ -16,22 +16,30 @@ Install global dependencies:
 
 Install gems:
 
+  ```  bash
   bundle install
+  ```
 
 
 ## To install
 
+  ```  bash
   npm install && bower install
+  ```
   
 ## Developing
 
 Unleash server (includes watch task for js and scss files):
   
+  ```  bash
   grunt serve
+  ```
   
 For JS files:
 
+  ```  bash
   grunt test
+  ```
   
 ## Production
 
