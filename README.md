@@ -10,7 +10,9 @@ A landing page for World Resources Watch
 
 Install global dependencies:
 
+  ```  bash
   npm install -g grunt-cli bower
+  ```
 
 Install gems:
 
