@@ -1,0 +1,94 @@
+.partners {
+
+  header {
+    text-align: center;
+    .wri-logo {
+      display: inline-block;
+      width: 189px;
+      height: 68px;
+      background: url('../assets/partners/wri.png') no-repeat;
+    }
+    h2 {
+      margin: 35px 0;
+      font-size: $h1-size;
+      color: $black;
+    }
+
+  }
+
+  .partners-list {
+    .custom-row {
+      display: flex;
+      &:first-child {
+        margin-bottom: 15px;
+      }
+      .card {
+        display: inline-flex;
+        padding: 35px;
+        margin-right: 15px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        background: $white;
+        text-align: center;
+        &:last-child {
+          margin: 0;
+        }
+
+        .partner-logo {
+          display: inline-block;
+
+          &.vizzuality {
+            width: 137px;
+            height: 34px;
+            background: url('../assets/partners/vizzuality.png') no-repeat;
+          }
+
+          &.google {
+            width: 154px;
+            height: 53px;
+            background: url('../assets/partners/google.png') no-repeat;
+          }
+
+          &.cartodb {
+            width: 125px;
+            height: 63px;
+            background: url('../assets/partners/cartodb.png') no-repeat;
+          }
+
+          &.zsl {
+            width: 122px;
+            height: 72px;
+            background: url('../assets/partners/zsl.png') no-repeat;
+          }
+
+          &.unep {
+            width: 81px;
+            height: 92px;
+            background: url('../assets/partners/unep.png') no-repeat;
+          }
+
+        }
+
+        .description {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+  footer {
+    display: block;
+    background: none;
+
+    h3 {
+      font-size: $h2-size;
+      font-weight: $light-format;
+    }
+    .button {
+      text-transform: none;
+    }
+  }
+
+}

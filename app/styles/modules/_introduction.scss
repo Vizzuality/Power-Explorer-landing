@@ -31,8 +31,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
 
     a:first-child {
+      color: $black;
       margin-right: 35px;
     }
 
@@ -40,6 +42,19 @@
       color: $yellow;
       font-size: $link-size;
       text-transform: uppercase;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin-right: 15px;
+        vertical-align: middle;
+        background: url('../assets/play.svg') no-repeat;
+      }
+
+      video {
+        width: 100%;
+      }
     }
   }
 }

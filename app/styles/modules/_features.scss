@@ -3,50 +3,172 @@
     text-align: center;
   }
 
-  .features-list {
+  section {
+    overflow: hidden;
+    .expose-container {
+      position: relative;
+      overflow: hidden;
+      width: 200%;
+      margin: 25px 0;
+      transition: opacity 1s ease;
+      visibility: visible;
+      opacity: 1;
 
-    .features-item {
-      float: left;
-      width: 50%;
+      .slide {
+        overflow: hidden;
+        width: 50%;
+        transition: opacity 1s ease;
+        opacity: 1;
+      }
+    }
 
-      .features-bg {
-        float: left;
-        width: 175px;
-        height: 156px;
-        &.citizens {
-          background: url('../assets/features/icon-citizens.svg');
+    .features-list {
+      overflow: hidden;
+      position: relative;
+      width: 80%;
+      min-height: 550px;
+      margin: 0 auto;
+      opacity: 1;
+
+      .features-item {
+        overflow: hidden;
+        position: absolute;
+        width: 50%;
+        height: 250px;
+
+        &:first-child {
+          transform: translate(0, 11px);
         }
-        &.organisations {
-          background: url('../assets/features/icon-organisations.svg');
+
+        &:nth-child(2) {
+          transform: translate(100%, 0);
+          &.moveRow {
+            transform: translate(100%, 0);
+          }
         }
-        &.governments {
-          background: url('../assets/features/icon-governments.svg');
+
+        &:nth-child(3) {
+          transform: translate(0, 75%);
+          &.moveRow {
+            transform: translate(200%, 0);
+          }
         }
-        &.researchers {
-          background: url('../assets/features/icon-researchers.svg');
+
+        &:nth-child(4) {
+          transform: translate(100%, 75%);
+          &.moveRow {
+            transform: translate(300%, 0);
+          }
         }
-        &.developers {
-          background: url('../assets/features/icon-developers.svg');
+
+        &:nth-child(5) {
+          transform: translate(0, 150%);
+          &.moveRow {
+            transform: translate(400%, 0);
+          }
         }
-        &.more {
-          background: url('../assets/features/icon-more.svg');
+
+        &:last-child {
+          transform: translate(100%, 150%);
+          &.moveRow {
+            transform: translate(500%, 0);
+          }
+        }
+
+        .features-bg {
+          float: left;
+          width: 175px;
+          height: 156px;
+          &.citizens {
+            background: url('../assets/features/icon-citizens.svg');
+          }
+          &.organisations {
+            background: url('../assets/features/icon-organisations.svg');
+          }
+          &.governments {
+            background: url('../assets/features/icon-governments.svg');
+          }
+          &.researchers {
+            background: url('../assets/features/icon-researchers.svg');
+          }
+          &.developers {
+            background: url('../assets/features/icon-developers.svg');
+          }
+          &.more {
+            background: url('../assets/features/icon-more.svg');
+          }
+        }
+
+        .features-info {
+          float: left;
+          width: calc(100% - 205px);
+          margin-left: 20px;
+
+          a {
+            font-size: $link-size;
+            font-weight: $bold-format;
+            color: $blue;
+            text-transform: uppercase;
+            &:hover {
+              color: darken($blue, 10%);
+            }
+          }
         }
       }
 
-      .features-info {
-        float: left;
-        width: calc(100% - 205px);
-        margin-left: 20px;
+      &.inline {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        //height: auto;
+        padding-top: 50px;
+        transition: opacity .3s ease;
+        opacity: 1;
+        min-height: initial;
 
-        p {
-          width: 50%;
+        &.fix-height {
+          height: auto;
         }
 
-        .learn-more {
-          font-size: $link-size;
-          font-weight: $bold-format;
-          color: $blue;
-          text-transform: uppercase;
+        .features-item {
+          position: initial;
+          width: auto;
+          height: auto;
+          transform: none;
+          text-align: center;
+
+
+
+          .features-bg {
+            float: none;
+
+            &.citizens {
+              transform: translateY(11px);
+            }
+
+            &.governments {
+              transform: translateY(27px);
+            }
+          }
+
+          .features-info {
+            float: none;
+            width: auto;
+            margin: 15px auto 0;
+
+            span {
+              font-size: $link-size;
+              font-weight: $bold-format;
+              color: $blue;
+              text-transform: uppercase;
+            }
+          }
+
+          &:hover {
+            .features-info > span {
+              color: darken($blue, 10%);
+            }
+          }
         }
       }
     }

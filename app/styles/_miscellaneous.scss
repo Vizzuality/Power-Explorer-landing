@@ -5,10 +5,25 @@
   text-align: center;
   text-transform: uppercase;
 
+  &.big {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 38px;
+    font-weight: $light-format;
+  }
+
   &.yellow {
     background-color: $yellow;
     &:hover {
       background-color: darken($yellow, 10%);
     }
   }
+
+  &.violet {
+    background-color: $violet;
+    &:hover {
+      background-color: darken($violet, 10%);
+    }
+  }
+
 }
