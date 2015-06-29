@@ -1,6 +1,22 @@
 .description {
-
+  padding-bottom: 0 !important;
   .slider {
     width: 95%;
+    margin-bottom: 0;
+
+    .img-box {
+      text-align: center;
+      height: 651px;
+      // &:first-child {
+      //   background: url('../assets/slider/tablet.png') no-repeat center;
+      // }
+      // &:first-child {
+      //   background: url('../assets/slider/phone.png') no-repeat center;
+      // }
+    }
+
+    .slick-dots {
+      bottom: 20px;
+    }
   }
 }

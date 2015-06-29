@@ -10,6 +10,7 @@ body {
     width: 100%;
     min-height: 300px;
     padding: 75px 0;
+    z-index: 1;
     .row {
       max-width: $max-width-size;
       min-width: $min-width-size;
