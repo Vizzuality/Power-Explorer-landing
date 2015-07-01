@@ -21,6 +21,9 @@ body {
     &.description, &.partners {
       background-color: $light-gray;
     }
+    &.description, &.signals {
+      padding: 0;
+    }
   }
 
   h2 {
@@ -43,6 +46,15 @@ body {
     padding: 0;
     li {
       list-style: none;
+    }
+  }
+
+  @media only screen and (min-width: 960px){
+    .column, .columns {
+      width: 50%;
+      &:last-child {
+        float: left !important;
+      }
     }
   }
 }

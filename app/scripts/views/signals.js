@@ -12,21 +12,21 @@ var SignalsView = Backbone.View.extend({
   moveLeft: function(e) {
     e.preventDefault();
 
-    this.$el.find('.slide-1').removeClass('move-right');
-    this.$el.find('.slide-2').removeClass('move-right');
+    this.$el.find('.slide-1').removeClass('move m-right');
+    this.$el.find('.slide-2').removeClass('move m-right');
 
-    this.$el.find('.slide-1').addClass('move-left');
-    this.$el.find('.slide-2').addClass('move-left');
+    this.$el.find('.slide-1').addClass('move m-left');
+    this.$el.find('.slide-2').addClass('move m-left');
   },
 
   moveRight: function(e) {
     e.preventDefault();
 
-    this.$el.find('.slide-1').removeClass('move-left');
-    this.$el.find('.slide-2').removeClass('move-left');
+    this.$el.find('.slide-1').removeClass('move m-left');
+    this.$el.find('.slide-2').removeClass('move left');
 
-    this.$el.find('.slide-1').addClass('move-right');
-    this.$el.find('.slide-2').addClass('move-right');
+    this.$el.find('.slide-1').addClass('move m-right');
+    this.$el.find('.slide-2').addClass('move m-right');
   }
 
 });

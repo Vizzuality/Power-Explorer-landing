@@ -16,7 +16,9 @@
 
       .slide {
         overflow: hidden;
+        display: flex;
         width: 50%;
+        align-items: center;
         transition: opacity 1s ease;
         opacity: 1;
       }
@@ -43,7 +45,7 @@
         }
 
         &:first-child {
-          transform: translate(0, 11px);
+          transform: translate(0, 0);
         }
 
         &:nth-child(2) {
