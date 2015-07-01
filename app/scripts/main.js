@@ -1,5 +1,6 @@
 
-var RocketLauncher = function() {
+var RocketLauncher = function(IntroductionView, SignalsView,
+  DescriptionView, FeaturesView) {
     'use strict';
 
     new IntroductionView();
@@ -12,5 +13,5 @@ var RocketLauncher = function() {
 window.onload = function() {
   'use strict';
 
-  RocketLauncher();
+   new RocketLauncher();
 };

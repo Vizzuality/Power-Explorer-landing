@@ -6,7 +6,7 @@ var IntroductionView = Backbone.View.extend({
   initialize: function() {
     $(window).on('scroll', _.bind(this.doParalaxEfect, this));
     this.bg = $('.bg');
-    this.doParalaxEfect()
+    this.doParalaxEfect();
     this.launchModal();
   },
 
@@ -28,13 +28,13 @@ var IntroductionView = Backbone.View.extend({
   doParalaxEfect: function() {
     var scroll = this.getScroll();
 
-    var translateY = (scroll / .7).toFixed(0)
+    var translateY = (scroll / 0.7).toFixed(0);
 
     this.bg.css({
-      // '-webkit-transform': 'translate3d(0,' + translateY + 'px, 0)',
-      // '-moz-transform': 'translate3d(0,' + translateY + 'px, 0)',
-      // '-ms-transform': 'translate3d(0,' + translateY + 'px, 0)',
-      // '-o-transform': 'translate3d(0,' + translateY + 'px, 0)',
+      '-webkit-transform': 'translate3d(0,' + translateY + 'px, 0)',
+      '-moz-transform': 'translate3d(0,' + translateY + 'px, 0)',
+      '-ms-transform': 'translate3d(0,' + translateY + 'px, 0)',
+      '-o-transform': 'translate3d(0,' + translateY + 'px, 0)',
       'transform' :  'translateY(' + translateY + 'px)'
      });
   }

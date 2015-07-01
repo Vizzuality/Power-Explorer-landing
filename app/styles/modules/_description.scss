@@ -1,5 +1,23 @@
 .description {
   padding-bottom: 0 !important;
+
+  .row {
+    position: relative;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .container-slider {
+      width: 75%;
+      transform: translateX(-35%);
+    }
+
+    .large-6:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+    }
+  }
   .slider {
     width: 95%;
     margin-bottom: 0;

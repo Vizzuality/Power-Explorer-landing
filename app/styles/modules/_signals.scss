@@ -14,11 +14,45 @@
   .slide-1, .slide-2 {
     float: left;
     width: 50%;
+    h2 {
+      margin-top: 0;
+    }
   }
 
-  h2 {
-    //text-align: center;
+  .slide-1 h2 { text-align: center;}
+
+  .slide-2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    .signals-container {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      .large-6:last-child {
+        position: relative;
+        height: 100%;
+        .signals-animation {
+          position: absolute;
+          top: auto;
+          bottom: 0;
+          width: 600px;
+          height: 570px;
+          background: url('../assets/signals_2.gif') no-repeat center;
+          background-size: 440px;
+        }
+      }
+      .back {
+        color: $green;
+        font-size: $link-size;
+        font-weight: $bold-format;
+        text-transform: uppercase;
+      }
+    }
   }
+
 
   .move-left {
     transition: transform .3s;
@@ -56,31 +90,11 @@
     }
   }
 
-  .signals-container {
-    display: flex;
-    align-items: center;
-    .signals-animation {
-      width: 600px;
-      height: 570px;
-      background: url('../assets/signals_2.gif') no-repeat center;
-      background-size: 440px;
-      position: absolute;
-      top: -148px;
-      bottom: auto;
-    }
-
-    .back {
-      color: $green;
-      font-size: $link-size;
-      font-weight: $bold-format;
-      text-transform: uppercase;
-    }
-  }
-
 
   .video-container {
     display: flex;
     justify-content: center;
+    margin-bottom: 75px;
   }
 }
 

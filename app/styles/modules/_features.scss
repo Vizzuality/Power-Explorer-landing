@@ -26,15 +26,21 @@
       overflow: hidden;
       position: relative;
       width: 80%;
-      min-height: 550px;
+      min-height: 580px;
       margin: 0 auto;
       opacity: 1;
 
       .features-item {
-        overflow: hidden;
+        // overflow: hidden;
         position: absolute;
         width: 50%;
         height: 250px;
+
+        h3 {
+          margin: 0;
+          font-size: $h3-size;
+          font-weight: $light-format;
+        }
 
         &:first-child {
           transform: translate(0, 11px);
@@ -103,6 +109,10 @@
           float: left;
           width: calc(100% - 205px);
           margin-left: 20px;
+
+          p {
+            margin-bottom: 5px;
+          }
 
           a {
             font-size: $link-size;

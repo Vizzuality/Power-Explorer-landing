@@ -1,6 +1,7 @@
 
 var SignalsView = Backbone.View.extend({
 
+
   el: '.signals',
 
   events: {
@@ -29,3 +30,5 @@ var SignalsView = Backbone.View.extend({
   }
 
 });
+
+
