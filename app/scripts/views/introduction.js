@@ -13,12 +13,12 @@ var IntroductionView = Backbone.View.extend({
   launchModal: function() {
     var $video = this.$el.find('video');
 
-    this.$el.find('.play-video').on('click', function(e) {
-      e.preventDefault();
+    // this.$el.find('.play-video').on('click', function(e) {
+    //   e.preventDefault();
 
-      $('#modal-intro').foundation('reveal', 'open');
-      $video[0].play();
-    });
+    //   $('#modal-intro').foundation('reveal', 'open');
+    //   $video[0].play();
+    // });
   },
 
   getScroll: function() {

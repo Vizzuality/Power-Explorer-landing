@@ -10,7 +10,8 @@ module.exports = function(grunt) {
    */
   var config = {
     app: 'app',
-    dist: 'dist'
+    dist: 'dist',
+    root: '/'
   };
 
   require('time-grunt')(grunt);
@@ -49,7 +50,7 @@ module.exports = function(grunt) {
           src: [
             '*.{ico,png,txt}',
             '{,*/}*.html',
-            'fonts/{,*/}*.*'
+            'assets/video/{,*/}*.*'
           ]
         }]
       }
@@ -114,24 +115,6 @@ module.exports = function(grunt) {
       ]
     },
 
-    //Require js
-    requirejs: {
-      options: {
-        preserveLicenseComments: false,
-        useStrict: true,
-        wrap: false
-      },
-      compile: {
-        options: {
-          baseUrl: '<%= config.app %>/scripts',
-          mainConfigFile: '<%= config.app %>/scripts/main.js',
-          include: 'main',
-          //name: '../../bower_components/almond/almond',
-          out: '<%= config.dist %>/scripts/main.js'
-        }
-      }
-    },
-
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
@@ -142,15 +125,33 @@ module.exports = function(grunt) {
       html: '<%= config.app %>/index.html'
     },
 
+    concat: {
+      generated: {
+        files: [
+          {
+            dest: '<%= config.dist %>/scripts/main.js',
+            src: [
+              'bower_components/jquery/dist/jquery.js',
+              'bower_components/underscore/underscore.js',
+              'bower_components/backbone/backbone.js',
+              'bower_components/foundation/js/foundation.js',
+              'bower_components/slick.js/slick/slick.js',
+              '<%= config.app %>/scripts/{,*/}*.js',
+            ]
+          }
+        ]
+      }
+    },
+
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       options: {
         assetsDirs: [
           '<%= config.dist %>',
-          '<%= config.dist %>/assets',
+          '<%= config.dist %>/assets/{,*/}',
+          '<%= config.dist %>/assets/video',
           '<%= config.dist %>/styles',
-          '<%= config.dist %>/styles/videos',
-          '<%= config.dist %>/styles/slider'
+          '<%= config.dist %>/styles/'
         ]
       },
       html: ['<%= config.dist %>/{,*/}*.html'],
@@ -200,21 +201,6 @@ module.exports = function(grunt) {
           src: '{,*/}*.html',
           dest: '<%= config.dist %>'
         }]
-      }
-    },
-
-    // Renames files for browser caching purposes
-    rev: {
-      dist: {
-        files: {
-          src: [
-            '<%= config.dist %>/scripts/{,*/}*.js',
-            '<%= config.dist %>/styles/{,*/}*.css',
-            '<%= config.dist %>/images/{,*/}*.*',
-            '<%= config.dist %>/styles/fonts/{,*/}*.*',
-            '<%= config.dist %>/*.{ico,png}'
-          ]
-        }
       }
     },
 
@@ -273,13 +259,12 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'useminPrepare',
-    'requirejs',
     'sass',
     'imagemin',
     'svgmin',
     'copy:dist',
     'cssmin:compile',
-    'rev',
+    'concat:generated',
     'usemin',
     'htmlmin'
   ]);
