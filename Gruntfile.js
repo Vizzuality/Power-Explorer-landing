@@ -9,7 +9,8 @@ module.exports = function(grunt) {
    * @type {Object}
    */
   var config = {
-    app: 'app'
+    app: 'app',
+    dist: 'dist'
   };
 
   require('time-grunt')(grunt);
@@ -24,35 +25,35 @@ module.exports = function(grunt) {
     config: config,
 
     // Empties folders to start fresh
-    // clean: {
-    //   dist: {
-    //     files: [{
-    //       dot: true,
-    //       src: [
-    //         '.tmp',
-    //         '<%= config.dist %>/*'
-    //       ]
-    //     }]
-    //   },
-    //   server: '.tmp'
-    // },
+    clean: {
+      dist: {
+        files: [{
+          dot: true,
+          src: [
+            '.tmp',
+            '<%= config.dist %>/*'
+          ]
+        }]
+      },
+      server: '.tmp'
+    },
 
     // Copies remaining files to places other tasks can use
-    // copy: {
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       dot: true,
-    //       cwd: '<%= config.app %>',
-    //       dest: '<%= config.dist %>',
-    //       src: [
-    //         '*.{ico,png,txt}',
-    //         '{,*/}*.html',
-    //         'fonts/{,*/}*.*'
-    //       ]
-    //     }]
-    //   }
-    // },
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= config.app %>',
+          dest: '<%= config.dist %>',
+          src: [
+            '*.{ico,png,txt}',
+            '{,*/}*.html',
+            'fonts/{,*/}*.*'
+          ]
+        }]
+      }
+    },
 
     // The actual grunt server settings
     connect: {
@@ -91,15 +92,15 @@ module.exports = function(grunt) {
       }
     },
 
-    // cssmin: {
-    //   compile: {
-    //     files: {
-    //       '<%= config.dist %>/styles/main.css': [
-    //         '.tmp/styles/main.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      compile: {
+        files: {
+          '<%= config.dist %>/styles/main.css': [
+            '.tmp/styles/main.css'
+          ]
+        }
+      }
+    },
 
     // Make sure code styles are up to par and there are no obvious mistakes
     jshint: {
@@ -113,107 +114,109 @@ module.exports = function(grunt) {
       ]
     },
 
-    // Require js
-    // requirejs: {
-    //   options: {
-    //     preserveLicenseComments: false,
-    //     useStrict: true,
-    //     wrap: false
-    //   },
-    //   compile: {
-    //     options: {
-    //       baseUrl: '<%= config.app %>/scripts',
-    //       mainConfigFile: '<%= config.app %>/scripts/main.js',
-    //       include: 'main',
-    //       name: '../../bower_components/almond/almond',
-    //       out: '<%= config.dist %>/scripts/main.js'
-    //     }
-    //   }
-    // },
+    //Require js
+    requirejs: {
+      options: {
+        preserveLicenseComments: false,
+        useStrict: true,
+        wrap: false
+      },
+      compile: {
+        options: {
+          baseUrl: '<%= config.app %>/scripts',
+          mainConfigFile: '<%= config.app %>/scripts/main.js',
+          include: 'main',
+          //name: '../../bower_components/almond/almond',
+          out: '<%= config.dist %>/scripts/main.js'
+        }
+      }
+    },
 
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
-    // useminPrepare: {
-    //   options: {
-    //     dest: '<%= config.dist %>'
-    //   },
-    //   html: '<%= config.app %>/index.html'
-    // },
+    useminPrepare: {
+      options: {
+        dest: '<%= config.dist %>'
+      },
+      html: '<%= config.app %>/index.html'
+    },
 
     // Performs rewrites based on rev and the useminPrepare configuration
-    // usemin: {
-    //   options: {
-    //     assetsDirs: [
-    //       '<%= config.dist %>',
-    //       '<%= config.dist %>/assets',
-    //       '<%= config.dist %>/styles'
-    //     ]
-    //   },
-    //   html: ['<%= config.dist %>/{,*/}*.html'],
-    //   css: ['<%= config.dist %>/styles/{,*/}*.css']
-    // },
+    usemin: {
+      options: {
+        assetsDirs: [
+          '<%= config.dist %>',
+          '<%= config.dist %>/assets',
+          '<%= config.dist %>/styles',
+          '<%= config.dist %>/styles/videos',
+          '<%= config.dist %>/styles/slider'
+        ]
+      },
+      html: ['<%= config.dist %>/{,*/}*.html'],
+      css: ['<%= config.dist %>/styles/{,*/}*.css']
+    },
 
     // The following *-min tasks produce minified files in the dist folder
-    // imagemin: {
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: '<%= config.app %>/assets',
-    //       src: '{,*/}*.{gif,jpeg,jpg,png}',
-    //       dest: '<%= config.dist %>/assets'
-    //     }]
-    //   }
-    // },
+    imagemin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/assets',
+          src: '{,*/}*.{gif,jpeg,jpg,png}',
+          dest: '<%= config.dist %>/assets'
+        }]
+      }
+    },
 
-    // svgmin: {
-    //   dist: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: '<%= config.app %>/assets',
-    //       src: '{,*/}*.svg',
-    //       dest: '<%= config.dist %>/assets'
-    //     }]
-    //   }
-    // },
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= config.app %>/assets',
+          src: '{,*/}*.svg',
+          dest: '<%= config.dist %>/assets'
+        }]
+      }
+    },
 
-    // htmlmin: {
-    //   dist: {
-    //     options: {
-    //       collapseBooleanAttributes: true,
-    //       collapseWhitespace: true,
-    //       conservativeCollapse: true,
-    //       removeAttributeQuotes: true,
-    //       removeCommentsFromCDATA: true,
-    //       removeEmptyAttributes: true,
-    //       removeOptionalTags: true,
-    //       // true would impact styles with attribute selectors
-    //       removeRedundantAttributes: false,
-    //       useShortDoctype: true
-    //     },
-    //     files: [{
-    //       expand: true,
-    //       cwd: '<%= config.dist %>',
-    //       src: '{,*/}*.html',
-    //       dest: '<%= config.dist %>'
-    //     }]
-    //   }
-    // },
+    htmlmin: {
+      dist: {
+        options: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          removeAttributeQuotes: true,
+          removeCommentsFromCDATA: true,
+          removeEmptyAttributes: true,
+          removeOptionalTags: true,
+          // true would impact styles with attribute selectors
+          removeRedundantAttributes: false,
+          useShortDoctype: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= config.dist %>',
+          src: '{,*/}*.html',
+          dest: '<%= config.dist %>'
+        }]
+      }
+    },
 
     // Renames files for browser caching purposes
-    // rev: {
-    //   dist: {
-    //     files: {
-    //       src: [
-    //         '<%= config.dist %>/scripts/{,*/}*.js',
-    //         '<%= config.dist %>/styles/{,*/}*.css',
-    //         '<%= config.dist %>/images/{,*/}*.*',
-    //         '<%= config.dist %>/styles/fonts/{,*/}*.*',
-    //         '<%= config.dist %>/*.{ico,png}'
-    //       ]
-    //     }
-    //   }
-    // },
+    rev: {
+      dist: {
+        files: {
+          src: [
+            '<%= config.dist %>/scripts/{,*/}*.js',
+            '<%= config.dist %>/styles/{,*/}*.css',
+            '<%= config.dist %>/images/{,*/}*.*',
+            '<%= config.dist %>/styles/fonts/{,*/}*.*',
+            '<%= config.dist %>/*.{ico,png}'
+          ]
+        }
+      }
+    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -228,12 +231,12 @@ module.exports = function(grunt) {
     },
 
     // gh-pages for deploy
-    // 'gh-pages': {
-    //   options: {
-    //     base: '<%= config.dist %>'
-    //   },
-    //   src: ['**']
-    // }
+    'gh-pages': {
+      options: {
+        base: '<%= config.dist %>'
+      },
+      src: ['**']
+    }
 
   });
 
@@ -258,7 +261,7 @@ module.exports = function(grunt) {
    * Create local server, useful to develop
    */
   grunt.registerTask('serve', [
-    'default',
+    //'default',
     'connect:server',
     'watch'
   ]);
@@ -267,25 +270,24 @@ module.exports = function(grunt) {
    * Build and create dist folder, useful for test before deploy
    * command: grunt build
    */
-  // grunt.registerTask('build', [
-  //   'clean:dist',
-  //   'useminPrepare',
-  //   'requirejs',
-  //   'sass',
-  //   'imagemin',
-  //   'svgmin',
-  //   'copy:dist',
-  //   'concat:generated',
-  //   'cssmin:compile',
-  //   'rev',
-  //   'usemin',
-  //   'htmlmin'
-  // ]);
+  grunt.registerTask('build', [
+    'clean:dist',
+    'useminPrepare',
+    'requirejs',
+    'sass',
+    'imagemin',
+    'svgmin',
+    'copy:dist',
+    'cssmin:compile',
+    'rev',
+    'usemin',
+    'htmlmin'
+  ]);
 
   /**
    * Deploy with gh-pages
    * command: grunt deploy
    */
-  //grunt.registerTask('deploy', ['test', 'build', 'gh-pages']);
+  grunt.registerTask('deploy', ['build', 'gh-pages']);
 
 };
