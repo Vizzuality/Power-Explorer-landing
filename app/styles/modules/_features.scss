@@ -21,6 +21,30 @@
         align-items: center;
         transition: opacity 1s ease;
         opacity: 1;
+
+        .columns:first-child {
+          width: 40%;
+          margin-right: 10%;
+          p {
+            margin-top: 45px;
+          }
+        }
+
+        .columns:last-child {
+          width: 50%;
+        }
+
+        h3 {
+          font-size: $h3-size;
+          font-weight: $light-format;
+          margin-bottom: 10px;
+        }
+
+
+
+        a {
+          color: $blue;
+        }
       }
     }
 
@@ -36,7 +60,7 @@
         // overflow: hidden;
         position: absolute;
         width: 50%;
-        height: 250px;
+        height: 270px;
 
         h3 {
           margin: 0;
@@ -113,7 +137,8 @@
           margin-left: 20px;
 
           p {
-            margin-bottom: 5px;
+            width: 75%;
+            margin: 5px 0;
           }
 
           a {
@@ -146,10 +171,9 @@
           position: initial;
           width: auto;
           height: auto;
+          padding-top: 40px;
           transform: none;
           text-align: center;
-
-
 
           .features-bg {
             float: none;
@@ -166,7 +190,7 @@
           .features-info {
             float: none;
             width: auto;
-            margin: 15px auto 0;
+            margin: 15px 0;
 
             span {
               font-size: $link-size;
@@ -180,6 +204,10 @@
             .features-info > span {
               color: darken($blue, 10%);
             }
+          }
+          &.current {
+            background: $light-gray;
+            border-radius: 4px;
           }
         }
       }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 59 + Oval 16</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="landings" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="landing-v04g-copy-3" sketch:type="MSArtboardGroup" transform="translate(-680.000000, -843.000000)" fill="#FFFFFF">
+            <g id="Rectangle-59-+-Oval-16" sketch:type="MSLayerGroup" transform="translate(680.000000, 843.000000)">
+                <path d="M13,22 L13,24 L27,24 L27,10 L25,10 L25,22 L13,22 Z" id="Rectangle-59" sketch:type="MSShapeGroup" transform="translate(20.000000, 17.000000) rotate(45.000000) translate(-20.000000, -17.000000) "></path>
+                <path d="M20,40 C31.045695,40 40,31.045695 40,20 C40,8.954305 31.045695,0 20,0 C8.954305,0 0,8.954305 0,20 C0,31.045695 8.954305,40 20,40 Z M20,38 C29.9411255,38 38,29.9411255 38,20 C38,10.0588745 29.9411255,2 20,2 C10.0588745,2 2,10.0588745 2,20 C2,29.9411255 10.0588745,38 20,38 Z" id="Oval-16" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

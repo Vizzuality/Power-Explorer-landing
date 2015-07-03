@@ -1,6 +1,7 @@
 .introduction {
   overflow: hidden;
   position: relative;
+  height: 100vh;
   .bg {
     position: absolute;
     top: 0;
@@ -44,13 +45,9 @@
       justify-content: center;
       background: none;
 
-      a:first-child {
-        color: $black;
-        margin-right: 35px;
-      }
-
       .play-video {
-        color: $yellow;
+        margin-left: 30px;
+        color: $white;
         font-size: $link-size;
         text-transform: uppercase;
         &:before {
@@ -67,6 +64,17 @@
           width: 100%;
         }
       }
+    }
+    .next{
+      position: absolute;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      top: auto;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url('../assets/arrow-down.svg') no-repeat center;
     }
   }
 }

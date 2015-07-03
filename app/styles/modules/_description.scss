@@ -8,6 +8,11 @@
     justify-content: center;
     align-items: center;
     padding-top: 75px;
+
+    .column:last-child {
+      width: 35%;
+      margin-top: -75px;
+    }
     .slider {
       width: 150%;
       transform: translateX(-40%);
