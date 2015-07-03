@@ -28,14 +28,14 @@ var IntroductionView = Backbone.View.extend({
   doParalaxEfect: function() {
     var scroll = this.getScroll();
 
-    var translateY = (scroll / 0.7).toFixed(0);
+    var translateY =  scroll - (scroll / 2);
 
     this.bg.css({
       '-webkit-transform': 'translate3d(0,' + translateY + 'px, 0)',
       '-moz-transform': 'translate3d(0,' + translateY + 'px, 0)',
       '-ms-transform': 'translate3d(0,' + translateY + 'px, 0)',
       '-o-transform': 'translate3d(0,' + translateY + 'px, 0)',
-      'transform' :  'translateY(' + translateY + 'px)'
+      'transform' :  'translate3d(0,' + translateY + 'px)'
      });
   }
 
