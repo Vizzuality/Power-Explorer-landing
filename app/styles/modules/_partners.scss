@@ -1,5 +1,5 @@
 .partners {
-
+  padding: 75px 0 100px !important;
   header {
     text-align: center;
     .wri-logo {
@@ -9,14 +9,15 @@
       background: url('../assets/partners/wri.png') no-repeat;
     }
     h2 {
-      margin: 35px 0;
-      font-size: $h1-size;
+      margin: 35px 0 65px;
+      font-size: 70px;
       color: $black;
     }
 
   }
 
   .partners-list {
+    margin-bottom: 85px;
     .custom-row {
       display: flex;
       &:first-child {
@@ -83,11 +84,9 @@
     background: none;
 
     h3 {
-      font-size: $h2-size;
+      margin-bottom: 25px;
+      font-size: 33px;
       font-weight: $light-format;
-    }
-    .button {
-      text-transform: none;
     }
   }
 

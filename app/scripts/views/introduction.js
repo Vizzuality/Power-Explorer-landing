@@ -3,18 +3,34 @@ var IntroductionView = Backbone.View.extend({
 
   el: '.introduction',
 
+  events: {
+    'click .play-video': 'launchModal',
+    'click .next' : 'scrollDown',
+  },
+
   initialize: function() {
     $(window).on('scroll', _.bind(this.doParalaxEfect, this));
     this.bg = $('.bg');
     this.doParalaxEfect();
-    this.launchModal();
+    //this.launchModal();
   },
 
-  launchModal: function() {
-    var $video = this.$el.find('video');
+  scrollDown: function(e) {
+    if(e) {
+      e.preventDefault();
+
+      $('body').animate({
+        scrollTop: $('.signals').offset().top
+      }, 500, 'swing');
+    }
+
+  },
+
+  launchModal: function(e) {
+    //var $video = this.$el.find('video');
 
     // this.$el.find('.play-video').on('click', function(e) {
-    //   e.preventDefault();
+    e.preventDefault();
 
     //   $('#modal-intro').foundation('reveal', 'open');
     //   $video[0].play();

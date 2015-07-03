@@ -25,7 +25,8 @@ var FeaturesView = Backbone.View.extend({
     $('.inline').addClass('unrevealed fix-height');
 
 
-    $('.inline .features-item').removeClass('is-hidden');
+    $('.inline .features-item').removeClass('is-hidden current');
+    $('#item-' + $item).addClass('current');
 
     // Reveals slider and slide
     $('.expose-container').removeClass('unrevealed is-hidden');
