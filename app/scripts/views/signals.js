@@ -12,14 +12,19 @@ var SignalsView = Backbone.View.extend({
     this.video = document.querySelector('#signals-video');
     this.isPlaying = false;
 
+    var startlimit = $('.signals').offset().top - 200,
+      endlimit = $('.signals').offset().top + $('.signals').height();
+
     $(window).on('scroll', _.bind(function() {
-      if (this.checkYOffset() > 520 && this.checkYOffset() < 1400 &&
+
+      if (this.checkYOffset() > startlimit  &&
+        this.checkYOffset() < endlimit &&
         !this.isPlaying) {
         this.playVideo();
       }
 
-      if (this.checkYOffset() < 250 && this.isPlaying ||
-        this.checkYOffset() > 1400 && this.isPlaying) {
+      if (this.checkYOffset() < startlimit / 2 && this.isPlaying ||
+        this.checkYOffset() > endlimit && this.isPlaying) {
         this.stopVideo();
       }
     }, this));
