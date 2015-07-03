@@ -50,7 +50,10 @@ module.exports = function(grunt) {
           src: [
             '*.{ico,png,txt}',
             '{,*/}*.html',
-            'assets/video/{,*/}*.*'
+            'assets/video/{,*/}*.*',
+            'assets/arrow-down.svg',
+            'assets/what.svg',
+            'assets/features/icon-developers.svg'
           ]
         }]
       }
