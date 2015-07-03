@@ -3,6 +3,10 @@
   visibility: none;
 }
 
+.invisible {
+  opacity: 0;
+}
+
 .unrevealed {
   visibility: hidden !important;
   opacity: 0 !important;
