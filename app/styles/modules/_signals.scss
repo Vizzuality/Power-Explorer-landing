@@ -69,18 +69,23 @@
         display: flex;
         height: 100%;
         align-items: center;
+        .large-6:first-child {
+          width: 40%;
+        }
         .large-6:last-child {
           position: relative;
+          width: 60%;
           height: 100%;
           .signals-animation {
             position: absolute;
             top: auto;
-            right: -30px;
+            left: 50%;
             bottom: 0;
             width: 600px;
             height: 570px;
             background: url('../assets/signals_2.gif') no-repeat center;
             background-size: 440px;
+            transform: translateX(-50%);
           }
         }
         .back {
