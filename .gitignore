@@ -2,6 +2,8 @@
 .tmp
 .ruby-version
 Gemfile.lock
+
+.grunt
 node_modules
 bower_components
 .sass-cache
