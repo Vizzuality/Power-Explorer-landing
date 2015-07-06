@@ -40,12 +40,13 @@ For JS files:
   ```  bash
   grunt test
   ```
-  
-## Production
 
-Under construction...
-
+Go to [http://localhost:5000](http://localhost:5000 "localhost") and have fun! :grin:
 
 ## Deploying
 
-Under construction... 
+Deploy to gh-pages:
+  
+```bash
+grunt deploy
+```
