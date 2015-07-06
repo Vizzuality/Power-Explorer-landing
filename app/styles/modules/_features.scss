@@ -9,7 +9,7 @@
       position: relative;
       overflow: hidden;
       width: 200%;
-      margin: 25px 0;
+      //margin: 25px 0;
       transition: opacity 1s ease;
       visibility: visible;
       opacity: 1;
@@ -61,6 +61,7 @@
         position: absolute;
         width: 50%;
         height: 270px;
+        padding: 20px 0;
 
         h3 {
           margin: 0;
