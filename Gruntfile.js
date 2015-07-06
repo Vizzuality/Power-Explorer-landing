@@ -136,6 +136,7 @@ module.exports = function(grunt) {
               'bower_components/jquery/dist/jquery.js',
               'bower_components/underscore/underscore.js',
               'bower_components/backbone/backbone.js',
+              'bower_components/Class.js/Class.js',
               'bower_components/foundation/js/foundation.js',
               'bower_components/slick.js/slick/slick.js',
               '<%= config.app %>/scripts/{,*/}*.js',
