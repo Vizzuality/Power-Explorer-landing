@@ -9,26 +9,43 @@ var SignalsView = Backbone.View.extend({
   },
 
   initialize: function() {
+    this.initVars();
+    this.setListeners();
+  },
+
+  initVars: function(){
+    // Video
     this.video = document.querySelector('#signals-video');
     this.isPlaying = false;
 
-    var startlimit = $('.signals').offset().top - 200,
-      endlimit = $('.signals').offset().top + $('.signals').height();
+    // Sliders
+    this.$slides = [
+      this.$el.find('.slide-1'),
+      this.$el.find('.slide-2')
+    ];
 
+    // Offsets
+    this.startlimit = $('.signals').offset().top - 200;
+    this.endlimit = $('.signals').offset().top + $('.signals').height();
+  },
+
+  setListeners: function() {
     $(window).on('scroll', _.bind(function() {
+      this.checkPlayVideo();
+    }, this));
+  },
 
-      if (this.checkYOffset() > startlimit  &&
-        this.checkYOffset() < endlimit &&
+  checkPlayVideo: function() {
+    if (this.checkYOffset() > this.startlimit  &&
+        this.checkYOffset() < this.endlimit &&
         !this.isPlaying) {
         this.playVideo();
       }
 
-      if (this.checkYOffset() < startlimit / 2 && this.isPlaying ||
-        this.checkYOffset() > endlimit && this.isPlaying) {
-        this.stopVideo();
-      }
-    }, this));
-
+    if (this.checkYOffset() < this.startlimit / 2 && this.isPlaying ||
+      this.checkYOffset() > this.endlimit && this.isPlaying) {
+      this.stopVideo();
+    }
   },
 
   checkYOffset: function() {
@@ -50,23 +67,23 @@ var SignalsView = Backbone.View.extend({
   },
 
   moveLeft: function(e) {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
 
-    this.$el.find('.slide-1').removeClass('move m-right');
-    this.$el.find('.slide-2').removeClass('move m-right');
-
-    this.$el.find('.slide-1').addClass('move m-left');
-    this.$el.find('.slide-2').addClass('move m-left');
+    this.$slides.forEach(function(slide) {
+      slide.removeClass('move m-right').addClass('move m-left');
+    });
   },
 
   moveRight: function(e) {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
 
-    this.$el.find('.slide-1').removeClass('move m-left');
-    this.$el.find('.slide-2').removeClass('move left');
-
-    this.$el.find('.slide-1').addClass('move m-right');
-    this.$el.find('.slide-2').addClass('move m-right');
+    this.$slides.forEach(function(slide) {
+      slide.removeClass('move m-left').addClass('move m-right');
+    });
   }
 
 });
