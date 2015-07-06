@@ -11,6 +11,7 @@ var SignalsView = Backbone.View.extend({
   initialize: function() {
     this.initVars();
     this.setListeners();
+    this.checkPlayVideo();
   },
 
   initVars: function(){
