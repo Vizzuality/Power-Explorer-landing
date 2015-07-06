@@ -1,0 +1,91 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Lato', 'Helevetica', sans-serif;
+  font-size: $regular-font-size;
+  line-height: 1;
+
+  .article-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 300px;
+    padding: 75px 0;
+    z-index: 1;
+    .row {
+      max-width: $max-width-size;
+      min-width: $min-width-size;
+    }
+    &.introduction {
+      background-color: $black;
+    }
+    &.description, &.partners {
+      background-color: $light-gray;
+    }
+    &.description, &.signals {
+      padding: 0;
+    }
+  }
+
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: $h2-size;
+    color: $violet;
+    font-weight: $light-format;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+
+  @media only screen and (min-width: 960px){
+    .column, .columns {
+      width: 50%;
+      &:last-child {
+        float: left !important;
+      }
+    }
+  }
+
+  .menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    background: $white;
+    padding: 15px 0;
+    z-index: 5;
+    transition: all .5s ease;
+    box-shadow: 0 0 10px rgba(0,0,0, .2);
+
+
+    &.fixed {
+      position: fixed;
+    }
+
+    .logo {
+      display: inline-block;
+      width: 334px;
+      height: 52px;
+      background: url('../assets/logo-menu.png') no-repeat center;
+    }
+  }
+}
+

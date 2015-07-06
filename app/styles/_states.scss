@@ -1,0 +1,14 @@
+.is-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.unrevealed {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0;
+}

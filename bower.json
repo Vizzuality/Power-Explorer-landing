@@ -1,0 +1,23 @@
+{
+  "name": "wrw-landing",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Vizzuality/WRW-landing",
+  "authors": [
+    "Vizzuality"
+  ],
+  "description": "A landing for WRW",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.2",
+    "backbone": "~1.2.1",
+    "slick.js": "~1.5.5",
+    "Class.js": "~1.0.0"
+  }
+}

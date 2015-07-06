@@ -1,0 +1,216 @@
+.features {
+  h2 {
+    text-align: center;
+  }
+
+  section {
+    overflow: hidden;
+    .expose-container {
+      position: relative;
+      overflow: hidden;
+      width: 200%;
+      margin: 25px 0;
+      transition: opacity 1s ease;
+      visibility: visible;
+      opacity: 1;
+
+      .slide {
+        overflow: hidden;
+        display: flex;
+        width: 50%;
+        align-items: center;
+        transition: opacity 1s ease;
+        opacity: 1;
+
+        .columns:first-child {
+          width: 40%;
+          margin-right: 10%;
+          p {
+            margin-top: 45px;
+          }
+        }
+
+        .columns:last-child {
+          width: 50%;
+        }
+
+        h3 {
+          font-size: $h3-size;
+          font-weight: $light-format;
+          margin-bottom: 10px;
+        }
+
+
+
+        a {
+          color: $blue;
+        }
+      }
+    }
+
+    .features-list {
+      overflow: hidden;
+      position: relative;
+      width: 80%;
+      min-height: 580px;
+      margin: 0 auto;
+      opacity: 1;
+
+      .features-item {
+        // overflow: hidden;
+        position: absolute;
+        width: 50%;
+        height: 270px;
+
+        h3 {
+          margin: 0;
+          font-size: $h3-size;
+          font-weight: $light-format;
+        }
+
+        &:first-child {
+          transform: translate(0, 0);
+        }
+
+        &:nth-child(2) {
+          transform: translate(100%, 0);
+          &.moveRow {
+            transform: translate(100%, 0);
+          }
+        }
+
+        &:nth-child(3) {
+          transform: translate(0, 75%);
+          &.moveRow {
+            transform: translate(200%, 0);
+          }
+        }
+
+        &:nth-child(4) {
+          transform: translate(100%, 75%);
+          &.moveRow {
+            transform: translate(300%, 0);
+          }
+        }
+
+        &:nth-child(5) {
+          transform: translate(0, 150%);
+          &.moveRow {
+            transform: translate(400%, 0);
+          }
+        }
+
+        &:last-child {
+          transform: translate(100%, 150%);
+          &.moveRow {
+            transform: translate(500%, 0);
+          }
+        }
+
+        .features-bg {
+          float: left;
+          width: 175px;
+          height: 156px;
+          &.citizens {
+            background: url('../assets/features/icon-citizens.svg');
+          }
+          &.organisations {
+            background: url('../assets/features/icon-organisations.svg');
+          }
+          &.governments {
+            background: url('../assets/features/icon-governments.svg');
+          }
+          &.researchers {
+            background: url('../assets/features/icon-researchers.svg');
+          }
+          &.developers {
+            background: url('../assets/features/icon-developers.svg');
+          }
+          &.more {
+            background: url('../assets/features/icon-more.svg');
+          }
+        }
+
+        .features-info {
+          float: left;
+          width: calc(100% - 205px);
+          margin-left: 20px;
+
+          p {
+            width: 75%;
+            margin: 5px 0;
+          }
+
+          a {
+            font-size: $link-size;
+            font-weight: $bold-format;
+            color: $blue;
+            text-transform: uppercase;
+            &:hover {
+              color: darken($blue, 10%);
+            }
+          }
+        }
+      }
+
+      &.inline {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        //height: auto;
+        padding-top: 50px;
+        transition: opacity .3s ease;
+        opacity: 1;
+        min-height: initial;
+
+        &.fix-height {
+          height: auto;
+        }
+
+        .features-item {
+          position: initial;
+          width: auto;
+          height: auto;
+          padding-top: 40px;
+          transform: none;
+          text-align: center;
+
+          .features-bg {
+            float: none;
+
+            &.citizens {
+              transform: translateY(11px);
+            }
+
+            &.governments {
+              transform: translateY(27px);
+            }
+          }
+
+          .features-info {
+            float: none;
+            width: auto;
+            margin: 15px 0;
+
+            span {
+              font-size: $link-size;
+              font-weight: $bold-format;
+              color: $blue;
+              text-transform: uppercase;
+            }
+          }
+
+          &:hover {
+            .features-info > span {
+              color: darken($blue, 10%);
+            }
+          }
+          &.current {
+            background: $light-gray;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
