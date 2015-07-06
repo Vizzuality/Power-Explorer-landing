@@ -24,7 +24,7 @@ Install gems:
 ## To install
 
   ```  bash
-  npm install && bower install
+  npm install && bower install 
   ```
   
 ## Developing
@@ -47,6 +47,6 @@ Go to [http://localhost:5000](http://localhost:5000 "localhost") and have fun! :
 
 Deploy to gh-pages:
   
-```bash
-grunt deploy
-```
+  ```bash
+  grunt deploy
+  ```
