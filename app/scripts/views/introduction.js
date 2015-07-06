@@ -9,10 +9,14 @@ var IntroductionView = Backbone.View.extend({
   },
 
   initialize: function() {
-    $(window).on('scroll', _.bind(this.doParalaxEfect, this));
     this.bg = $('.bg');
-    this.doParalaxEfect();
+    this.setListeners();
+    this.doParallaxEffect();
     //this.launchModal();
+  },
+
+  setListeners: function() {
+    $(window).on('scroll', _.bind(this.doParallaxEffect, this));
   },
 
   scrollDown: function(e) {
@@ -23,7 +27,6 @@ var IntroductionView = Backbone.View.extend({
         scrollTop: $('.signals').offset().top
       }, 500, 'swing');
     }
-
   },
 
   launchModal: function(e) {
@@ -41,10 +44,9 @@ var IntroductionView = Backbone.View.extend({
     return window.pageYOffset;
   },
 
-  doParalaxEfect: function() {
-    var scroll = this.getScroll();
-
-    var translateY =  scroll - (scroll / 2);
+  doParallaxEffect: function() {
+    var scroll = this.getScroll(),
+      translateY = scroll - (scroll / 2);
 
     this.bg.css({
       '-webkit-transform': 'translate3d(0,' + translateY + 'px, 0)',
@@ -52,7 +54,7 @@ var IntroductionView = Backbone.View.extend({
       '-ms-transform': 'translate3d(0,' + translateY + 'px, 0)',
       '-o-transform': 'translate3d(0,' + translateY + 'px, 0)',
       'transform' :  'translate3d(0,' + translateY + 'px)'
-     });
+    });
   }
 
 });
