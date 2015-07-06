@@ -1,5 +1,6 @@
 
 var FeaturesView = Backbone.View.extend({
+
   el: '.features',
 
   events: {
@@ -17,13 +18,7 @@ var FeaturesView = Backbone.View.extend({
       $item = $(e.currentTarget).data('item');
     }
 
-    if ($currentFeature) {
-      $currentFeature.addClass('is-hidden');
-    }
-
-
     $('.inline').addClass('unrevealed fix-height');
-
 
     $('.inline .features-item').removeClass('is-hidden current');
     $('#item-' + $item).addClass('current');
@@ -40,7 +35,6 @@ var FeaturesView = Backbone.View.extend({
     window.setTimeout(function() {
       $('.inline').removeClass('unrevealed');
     }, 150);
-
   }
 
 });
