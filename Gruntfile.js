@@ -10,8 +10,7 @@ module.exports = function(grunt) {
    */
   var config = {
     app: 'app',
-    dist: 'dist',
-    root: '/'
+    dist: 'dist'
   };
 
   require('time-grunt')(grunt);
