@@ -1,14 +1,40 @@
 
-var RocketLauncher = function() {
-    'use strict';
+var RocketLauncher = Class.extend({
 
+  init: function() {
     new IntroductionView();
     new SignalsView();
-    new DescriptionView();
+    // new DescriptionView();
     new FeaturesView();
 
-    var $menu = $('.menu');
-    var limitShow = $('.signals').offset().top;
+    this.setListeners();
+    this.checkPosition();
+  },
+
+  setListeners: function() {
+    $('.menu .logo').on('click', function(e) {
+      if(e) {
+        e.preventDefault();
+      }
+
+      $('body').animate({
+        scrollTop: 0
+      }, 500, 'swing');
+    });
+
+    $(window).on('scroll', _.bind(function() {
+      this.checkPosition();
+    }, this));
+  },
+
+  getScroll: function() {
+    return window.pageYOffset;
+  },
+
+  checkPosition: function() {
+    var bodyYOffset = this.getScroll(),
+      $menu = $('.menu'),
+      limitShow = $('.signals').offset().top;
 
     var showMenu = function() {
       $menu.removeClass('unrevealed');
@@ -18,42 +44,16 @@ var RocketLauncher = function() {
       $menu.addClass('unrevealed');
     };
 
-    var getScroll = function() {
-      return window.pageYOffset;
-    };
-
-    var checkPosition = function() {
-      var bodyHeight = getScroll();
-
-      if (bodyHeight >= limitShow) {
-        showMenu()
-      } else {
-        hideMenu();
-      }
+    if (bodyYOffset >= limitShow) {
+      showMenu();
+    } else {
+      hideMenu();
     }
+  }
 
-    $('.menu .logo').on('click', function(e) {
-      if(e) {
-        e.preventDefault();
-      }
-
-      $('body').animate({
-        scrollTop: 0
-      }, 500, 'swing');
-
-    })
-
-    $(window).on('scroll', function() {
-
-      checkPosition();
-    });
-
-    checkPosition();
-};
-
+});
 
 window.onload = function() {
   'use strict';
-
-   new RocketLauncher();
+  new RocketLauncher();
 };

@@ -17,7 +17,6 @@
   "dependencies": {
     "foundation": "~5.5.2",
     "backbone": "~1.2.1",
-    "slick.js": "~1.5.5",
-    "Class.js": "~1.0.0"
+    "slick.js": "~1.5.5"
   }
 }
