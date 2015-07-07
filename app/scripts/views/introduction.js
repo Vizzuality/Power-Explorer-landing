@@ -17,6 +17,18 @@ var IntroductionView = Backbone.View.extend({
 
   setListeners: function() {
     $(window).on('scroll', _.bind(this.doParallaxEffect, this));
+    $(window).on('scroll', _.bind(this.showNext, this));
+  },
+
+  showNext: function() {
+    var limitShow = $('.signals').offset().top / 4.5;
+
+    if (this.getScroll() >= limitShow) {
+      $('.next').addClass('unrevealed');
+    } else {
+      $('.next').removeClass('unrevealed');
+    }
+
   },
 
   scrollDown: function(e) {

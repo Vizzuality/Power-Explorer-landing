@@ -5,7 +5,6 @@
     position: relative;
     overflow: hidden;
     width: 200%;
-    margin-top: 100px;
 
     .move {
       transition: transform .3s;
@@ -27,32 +26,22 @@
     }
 
     .slide-1 {
-      h2 { text-align: center;}
+      header {
+        margin-top: 100px;
+        h2 { text-align: center;}
+      }
 
       section {
         width: 55%;
         margin: 0 auto;
         text-align: center;
 
-        .link-signals {
-          display: inline-block;
-          margin: 35px 0;
-          font-size: $link-size;
-          text-transform: uppercase;
-          font-weight: $bold-format;
-          color: $green;
-          &:before {
-            content: '';
-            display: inline-block;
-            width: 29px;
-            height: 29px;
-            margin-right: 10px;
-            vertical-align: middle;
-            background: url('../assets/what.svg') no-repeat center;
-          }
+        #link-signals {
+          margin: 25px 0;
         }
       }
-      .video-container {
+      .video-container,
+      .gif-container {
         display: flex;
         justify-content: center;
         margin-bottom: 100px;
@@ -78,13 +67,11 @@
           height: 100%;
           .signals-animation {
             position: absolute;
-            top: auto;
             left: 50%;
-            bottom: 0;
             width: 600px;
-            height: 570px;
-            background: url('../assets/signals_2.gif') no-repeat center;
-            background-size: 440px;
+            height: 100%;
+            background: url('../assets/signals_2.gif') no-repeat center bottom;
+            background-size: auto 730px;
             transform: translateX(-50%);
           }
         }

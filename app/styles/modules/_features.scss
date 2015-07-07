@@ -9,7 +9,7 @@
       position: relative;
       overflow: hidden;
       width: 200%;
-      margin: 25px 0;
+      //margin: 25px 0;
       transition: opacity 1s ease;
       visibility: visible;
       opacity: 1;
@@ -51,22 +51,15 @@
     .features-list {
       overflow: hidden;
       position: relative;
-      width: 80%;
-      min-height: 580px;
+      height: 685px;
       margin: 0 auto;
       opacity: 1;
 
       .features-item {
-        // overflow: hidden;
         position: absolute;
         width: 50%;
-        height: 270px;
-
-        h3 {
-          margin: 0;
-          font-size: $h3-size;
-          font-weight: $light-format;
-        }
+        min-height: 300px;
+        padding: 20px 0;
 
         &:first-child {
           transform: translate(0, 0);
@@ -109,25 +102,25 @@
 
         .features-bg {
           float: left;
-          width: 175px;
+          width: 150px;
           height: 156px;
           &.citizens {
-            background: url('../assets/features/icon-citizens.svg');
+            background: url('../assets/features/icon-citizens.svg') center;
           }
           &.organisations {
-            background: url('../assets/features/icon-organisations.svg');
+            background: url('../assets/features/icon-organisations.svg') center;
           }
           &.governments {
-            background: url('../assets/features/icon-governments.svg');
+            background: url('../assets/features/icon-governments.svg') center;
           }
           &.researchers {
-            background: url('../assets/features/icon-researchers.svg');
+            background: url('../assets/features/icon-researchers.svg') center;
           }
           &.developers {
-            background: url('../assets/features/icon-developers.svg');
+            background: url('../assets/features/icon-developers.svg') center;
           }
           &.more {
-            background: url('../assets/features/icon-more.svg');
+            background: url('../assets/features/icon-more.svg') center;
           }
         }
 
@@ -135,6 +128,19 @@
           float: left;
           width: calc(100% - 205px);
           margin-left: 20px;
+
+          h3 {
+            a {
+              margin: 0;
+              font-size: $h3-size;
+              font-weight: $light-format;
+              color: $light-black;
+              text-transform: none;
+              &:hover {
+                color: inherit;
+              }
+            }
+          }
 
           p {
             width: 75%;
@@ -169,34 +175,37 @@
 
         .features-item {
           position: initial;
-          width: auto;
+          width: 16.6666%;
           height: auto;
           padding-top: 40px;
           transform: none;
           text-align: center;
 
-          .features-bg {
-            float: none;
+          .link-feature {
+            display: block;
+            .features-bg {
+              float: none;
+              width: 100%;
+              &.citizens {
+                transform: translateY(11px);
+              }
 
-            &.citizens {
-              transform: translateY(11px);
+              &.governments {
+                transform: translateY(27px);
+              }
             }
 
-            &.governments {
-              transform: translateY(27px);
-            }
-          }
+            .features-info {
+              float: none;
+              width: auto;
+              margin: 15px 0;
 
-          .features-info {
-            float: none;
-            width: auto;
-            margin: 15px 0;
-
-            span {
-              font-size: $link-size;
-              font-weight: $bold-format;
-              color: $blue;
-              text-transform: uppercase;
+              span {
+                font-size: $link-size;
+                font-weight: $bold-format;
+                color: $blue;
+                text-transform: uppercase;
+              }
             }
           }
 
@@ -206,8 +215,11 @@
             }
           }
           &.current {
-            background: $light-gray;
-            border-radius: 4px;
+            .features-info > span {
+              color: $light-black;
+              padding-bottom: 15px;
+              border-bottom: 4px solid $light-black;
+            }
           }
         }
       }

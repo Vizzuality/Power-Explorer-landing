@@ -4,8 +4,9 @@ var FeaturesView = Backbone.View.extend({
   el: '.features',
 
   events: {
-    'click .learn-more': 'setFeature',
-    'click .link-feature': 'setFeature'
+    'click a': 'setFeature'
+    // 'click .learn-more': 'setFeature',
+    // 'click .link-feature': 'setFeature'
   },
 
   setFeature: function(e) {
