@@ -17,6 +17,8 @@ body {
       min-width: $min-width-size;
     }
     &.introduction {
+      align-items: initial;
+      padding: 75px 0 0;
       background-color: $black;
     }
     &.description, &.partners {
@@ -30,11 +32,15 @@ body {
   h1, h2, h3 {
     line-height: 1.2;
   }
+  h1 {
+    letter-spacing: -0.05em;
+  }
 
   h2 {
     font-size: $h2-size;
     color: $violet;
     font-weight: $light-format;
+    letter-spacing: -0.03em;
   }
 
   p {

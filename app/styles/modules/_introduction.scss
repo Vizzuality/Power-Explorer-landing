@@ -40,12 +40,8 @@
     }
 
     footer {
-      position: absolute;
-      left: 0;
-      bottom: 5%;
+
       display: block;
-      // align-items: center;
-      // justify-content: center;
       background: none;
 
       .play-video {
@@ -68,11 +64,22 @@
         }
       }
     }
+  }
+  .container-next {
+    position: absolute;
+    top: auto;
+    bottom: 10%;
+    left: 0;
+    right: 0;
     .next{
+      // position: absolute;
+      // left: 50%;
+      // bottom: 5%;
+      // transform: translateX(-50%);
       display: block;
       width: 40px;
       height: 40px;
-      margin: 4% auto 0;
+      margin: auto;
       background: url('../assets/arrow-down.svg') no-repeat center;
     }
   }
