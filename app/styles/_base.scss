@@ -88,5 +88,13 @@ body {
       background: url('../assets/logo-menu.svg') no-repeat center;
     }
   }
+
+  .large-10,
+  .medium-10 {
+    &.large-offset-2,
+    &.medium-offset-2 {
+      margin: 0 8.3333% !important;
+    }
+  }
 }
 

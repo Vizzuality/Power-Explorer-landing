@@ -34,25 +34,12 @@
         margin: 0 auto;
         text-align: center;
 
-        .link-signals {
-          display: inline-block;
-          margin: 35px 0;
-          font-size: $link-size;
-          text-transform: uppercase;
-          font-weight: $bold-format;
-          color: $green;
-          &:before {
-            content: '';
-            display: inline-block;
-            width: 29px;
-            height: 29px;
-            margin-right: 10px;
-            vertical-align: middle;
-            background: url('../assets/what.svg') no-repeat center;
-          }
+        #link-signals {
+          margin: 25px 0;
         }
       }
-      .video-container {
+      .video-container,
+      .gif-container {
         display: flex;
         justify-content: center;
         margin-bottom: 100px;

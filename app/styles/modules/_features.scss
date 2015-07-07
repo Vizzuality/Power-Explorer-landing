@@ -51,8 +51,8 @@
     .features-list {
       overflow: hidden;
       position: relative;
-      width: 80%;
-      min-height: 580px;
+      // width: 80%;
+      height: 650px;
       margin: 0 auto;
       opacity: 1;
 
@@ -60,7 +60,7 @@
         // overflow: hidden;
         position: absolute;
         width: 50%;
-        height: 270px;
+        min-height: 300px;
         padding: 20px 0;
 
         h3 {
