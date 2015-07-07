@@ -215,8 +215,10 @@
             }
           }
           &.current {
-            background: $light-gray;
-            border-radius: 4px;
+            .features-info > span {
+              padding-bottom: 15px;
+              border-bottom: 4px solid $light-black;
+            }
           }
         }
       }
