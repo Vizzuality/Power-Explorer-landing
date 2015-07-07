@@ -5,7 +5,6 @@
     position: relative;
     overflow: hidden;
     width: 200%;
-    margin-top: 100px;
 
     .move {
       transition: transform .3s;
@@ -27,7 +26,10 @@
     }
 
     .slide-1 {
-      h2 { text-align: center;}
+      header {
+        margin-top: 100px;
+        h2 { text-align: center;}
+      }
 
       section {
         width: 55%;
@@ -65,13 +67,11 @@
           height: 100%;
           .signals-animation {
             position: absolute;
-            top: auto;
             left: 50%;
-            bottom: 0;
             width: 600px;
-            height: 570px;
-            background: url('../assets/signals_2.gif') no-repeat center;
-            background-size: 440px;
+            height: 100%;
+            background: url('../assets/signals_2.gif') no-repeat center bottom;
+            background-size: auto 730px;
             transform: translateX(-50%);
           }
         }

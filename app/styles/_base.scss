@@ -17,14 +17,14 @@ body {
       min-width: $min-width-size;
     }
     &.introduction {
-      align-items: initial;
-      padding: 75px 0 0;
       background-color: $black;
     }
     &.description, &.partners {
       background-color: $light-gray;
     }
-    &.description, &.signals {
+    &.introduction,
+    &.description,
+    &.signals {
       padding: 0;
     }
   }

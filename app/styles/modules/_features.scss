@@ -175,34 +175,37 @@
 
         .features-item {
           position: initial;
-          width: auto;
+          width: 16.6666%;
           height: auto;
           padding-top: 40px;
           transform: none;
           text-align: center;
 
-          .features-bg {
-            float: none;
+          .link-feature {
+            display: block;
+            .features-bg {
+              float: none;
+              width: 100%;
+              &.citizens {
+                transform: translateY(11px);
+              }
 
-            &.citizens {
-              transform: translateY(11px);
+              &.governments {
+                transform: translateY(27px);
+              }
             }
 
-            &.governments {
-              transform: translateY(27px);
-            }
-          }
+            .features-info {
+              float: none;
+              width: auto;
+              margin: 15px 0;
 
-          .features-info {
-            float: none;
-            width: auto;
-            margin: 15px 0;
-
-            span {
-              font-size: $link-size;
-              font-weight: $bold-format;
-              color: $blue;
-              text-transform: uppercase;
+              span {
+                font-size: $link-size;
+                font-weight: $bold-format;
+                color: $blue;
+                text-transform: uppercase;
+              }
             }
           }
 
