@@ -95,6 +95,22 @@ module.exports = function(grunt) {
       }
     },
 
+    postcss: {
+      options: {
+        processors: [
+          require('autoprefixer-core')({
+            browswers: ['last 2 versions']
+          })
+        ]
+      },
+      dev: {
+        src: '.tmp/styles/main.css'
+      },
+      dist: {
+        src: '<%= config.dist %>/styles/main.css'
+      }
+    },
+
     cssmin: {
       compile: {
         files: {
@@ -252,7 +268,8 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', [
     //'default',
     'connect:server',
-    'watch'
+    'watch',
+    'postcss:dev'
   ]);
 
   /**
@@ -267,6 +284,7 @@ module.exports = function(grunt) {
     'svgmin',
     'copy:dist',
     'cssmin:compile',
+    'postcss:dist',
     'concat:generated',
     'usemin',
     'htmlmin'

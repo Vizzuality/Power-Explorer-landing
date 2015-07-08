@@ -4,13 +4,20 @@ var SignalsView = Backbone.View.extend({
   el: '.signals',
 
   events: {
-    'click .link-signals' : 'moveLeft',
+    'click #link-signals' : 'moveLeft',
     'click .back' : 'moveRight'
   },
 
   initialize: function() {
     this.initVars();
     this.setListeners();
+
+    if (!this.checkIsIpad()) {
+      this.checkPlayVideo();
+    } else {
+      $('.video-container').addClass('unrevealed');
+      $('.gif-container').removeClass('unrevealed');
+    }
   },
 
   initVars: function(){
@@ -33,6 +40,10 @@ var SignalsView = Backbone.View.extend({
     $(window).on('scroll', _.bind(function() {
       this.checkPlayVideo();
     }, this));
+  },
+
+  checkIsIpad: function() {
+    return navigator.platform === 'iPad' ? true : false;
   },
 
   checkPlayVideo: function() {
