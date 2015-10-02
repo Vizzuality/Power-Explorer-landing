@@ -227,7 +227,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: '<%= jshint.all %>',
-        tasks: ['jshint']
+        tasks: []
       },
       styles: {
         files: '<%= config.app %>/styles/{,*/}*.scss',
