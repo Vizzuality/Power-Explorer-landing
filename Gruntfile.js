@@ -52,7 +52,8 @@ module.exports = function(grunt) {
             'assets/video/{,*/}*.*',
             'assets/arrow-down.svg',
             'assets/what.svg',
-            'assets/features/icon-developers.svg'
+            'assets/features/icon-developers.svg',
+            'CNAME'
           ]
         }]
       }
