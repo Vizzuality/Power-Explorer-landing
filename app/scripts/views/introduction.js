@@ -4,8 +4,9 @@ var IntroductionView = Backbone.View.extend({
   el: '.introduction',
 
   events: {
-    'click .play-video': 'launchModal',
+    // 'click .play-video': 'launchModal',
     'click .next' : 'scrollDown',
+    'click #join-button': 'launchJoinModal',
   },
 
   initialize: function() {
@@ -13,6 +14,7 @@ var IntroductionView = Backbone.View.extend({
     this.setListeners();
     this.doParallaxEffect();
     //this.launchModal();
+    this.launchJoinModal();
   },
 
   setListeners: function() {
@@ -50,6 +52,15 @@ var IntroductionView = Backbone.View.extend({
     //   $('#modal-intro').foundation('reveal', 'open');
     //   $video[0].play();
     // });
+  },
+
+  launchJoinModal: function(e) {
+    // var $video = this.$el.find('video');
+
+    this.$el.find('#join-button').on('click', function(e) {
+      e.preventDefault();
+      $('#modal-join').foundation('reveal', 'open');
+    });
   },
 
   getScroll: function() {
