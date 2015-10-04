@@ -1,84 +1,99 @@
-.partners {
-  padding: 75px 0 100px !important;
-  header {
+.m-partners {
+  border: 1px solid #e3e4e6;
+  border-left: 0;
+  border-right: 0;
+  padding: 0 !important;
+
+  .partners-title {
+    position: absolute;
+    text-transform: uppercase;
     text-align: center;
-    .wri-logo {
-      display: inline-block;
-      width: 189px;
-      height: 68px;
-      background: url('../assets/partners/wri.png') no-repeat;
-    }
-    h2 {
-      margin: 35px 0 65px;
-      font-size: 70px;
-      color: $light-black;
-    }
+    color: #b9bfc4;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #fff;
+    width: 100px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translatey(-50%);
 
+      a {
+        color: #b9bfc4;
+        text-decoration: none;
+      }
   }
 
-  .partners-list {
-    margin-bottom: 85px;
-    .custom-row {
+  ul {
+    margin: 0;
+    padding: 30px 0;
+    // display: flex;
+    .slick-arrow {
+      position: absolute;
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  li {
+    list-style: none;
+    float: left;
+    // margin-right: 60px;
+
+    a {
       display: flex;
-      &:first-child {
-        margin-bottom: 15px;
-      }
-      .card {
-        display: inline-flex;
-        padding: 35px;
-        margin-right: 15px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        background: $white;
-        text-align: center;
-        &:last-child {
-          margin: 0;
-        }
-
-        .partner-logo {
-          display: inline-block;
-
-          &.vizzuality {
-            width: 156px;
-            height: 39px;
-            background: url('../assets/partners/vizzuality.png') no-repeat;
-          }
-
-          &.google {
-            width: 150px;
-            height: 49px;
-            background: url('../assets/partners/google.png') no-repeat;
-          }
-
-          &.cartodb {
-            width: 143px;
-            height: 37px;
-            background: url('../assets/partners/cartodb.png') no-repeat;
-          }
-
-          &.digital-globe {
-            width: 150px;
-            height: 49px;
-            background: url('../assets/partners/digitalglobe.png') no-repeat;
-          }
-
-          &.university-maryland {
-            width: 95px;
-            height: 94px;
-            background: url('../assets/partners/ume.png') no-repeat;
-          }
-
-        }
-
-        .description {
-          text-align: center;
-        }
+      align-items: center;
+      min-height: 50px;
+      img{
+        display: block;
+        margin: 0 auto;
       }
     }
+
+    a.is-link {
+      cursor: default;
+      transition: filter 0.2s, opacity 0.2s;
+    }
+
+    &:hover {
+      a.is-link {
+        filter: grayscale(100%);
+        opacity: 0.4;
+      }
+    }
+
   }
 
+  // @media screen and (max-width: $responsive-break--tablet) {
 
+  //   margin-top: 40px;
+
+  //   ul {
+  //     flex-wrap: wrap;
+  //     padding: 0;
+  //     justify-content: space-around;
+  //   }
+
+  //   li {
+  //     flex-basis: 40%;
+  //     margin-right: 0;
+  //     margin-bottom: 10px;
+  //     display: flex;
+  //     justify-content: space-around;
+  //   }
+
+  // }
+
+  // @media screen and (min-width: $responsive-break--mobile) and (max-width: $responsive-break--tablet) {
+  //   li {
+  //     flex-basis: 28%;
+  //   }
+  // }
+
+}
+
+
+.partners {
   footer {
     display: block;
     background: none;
