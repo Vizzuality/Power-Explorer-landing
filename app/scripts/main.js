@@ -6,6 +6,7 @@ var RocketLauncher = Class.extend({
     new SignalsView();
     // new DescriptionView();
     new FeaturesView();
+    new FooterCarousel();
 
     this.setListeners();
     this.checkPosition();
