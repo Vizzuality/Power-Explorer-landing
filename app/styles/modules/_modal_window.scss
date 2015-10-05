@@ -1,9 +1,9 @@
 #modal-join {
   width: 640px;
   position: fixed;
-  top: 50%;
+  top: 50% !important;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%, -50%);
 }
 
 #mc_embed_signup {
