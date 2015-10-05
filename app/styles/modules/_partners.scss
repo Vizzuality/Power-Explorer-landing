@@ -1,99 +1,57 @@
-.m-partners {
-  border: 1px solid #e3e4e6;
-  border-left: 0;
-  border-right: 0;
-  padding: 0 !important;
-
-  .partners-title {
-    position: absolute;
-    text-transform: uppercase;
+.partners {
+  padding: 75px 0 100px !important;
+  header {
     text-align: center;
-    color: #b9bfc4;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: #fff;
-    width: 100px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translatey(-50%);
+    .wri-logo {
+      display: inline-block;
+      width: 189px;
+      height: 68px;
+      background: url('../assets/partners/wri-big.png') no-repeat;
+    }
+    h2 {
+      margin: 35px 0 65px;
+      font-size: 70px;
+      color: $light-black;
+    }
 
-      a {
-        color: #b9bfc4;
-        text-decoration: none;
-      }
   }
 
   ul {
     margin: 0;
     padding: 30px 0;
-    // display: flex;
+    width: 100%;
+
     .slick-arrow {
       position: absolute;
       display: none;
       visibility: hidden;
       opacity: 0;
     }
+
+    .slick-track {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .slick-slide {
+      height: auto;
+      display: flex;
+    }
   }
 
   li {
     list-style: none;
     float: left;
-    // margin-right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    a {
-      display: flex;
-      align-items: center;
-      min-height: 50px;
-      img{
-        display: block;
-        margin: 0 auto;
-      }
+    img {
+      display: block;
+      margin: 0 auto;
     }
-
-    a.is-link {
-      cursor: default;
-      transition: filter 0.2s, opacity 0.2s;
-    }
-
-    &:hover {
-      a.is-link {
-        filter: grayscale(100%);
-        opacity: 0.4;
-      }
-    }
-
   }
 
-  // @media screen and (max-width: $responsive-break--tablet) {
-
-  //   margin-top: 40px;
-
-  //   ul {
-  //     flex-wrap: wrap;
-  //     padding: 0;
-  //     justify-content: space-around;
-  //   }
-
-  //   li {
-  //     flex-basis: 40%;
-  //     margin-right: 0;
-  //     margin-bottom: 10px;
-  //     display: flex;
-  //     justify-content: space-around;
-  //   }
-
-  // }
-
-  // @media screen and (min-width: $responsive-break--mobile) and (max-width: $responsive-break--tablet) {
-  //   li {
-  //     flex-basis: 28%;
-  //   }
-  // }
-
-}
-
-
-.partners {
   footer {
     display: block;
     background: none;
