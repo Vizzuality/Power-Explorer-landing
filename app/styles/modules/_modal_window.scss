@@ -1,6 +1,125 @@
+#modal-join {
+  width: 640px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
 #mc_embed_signup {
-  h2{
-    font-family: 'Lato', 'Helevetica', sans-serif;
-    font-size: 32px;
+  font-family: 'Lato', 'Helevetica', sans-serif;
+  font-weight: $light-format;
+  font-size: $regular-font-size;
+
+  h2 {
+    text-align: center;
+    margin-top: 0px;
+
+    @media only screen and (max-width: 1280px) {
+      font-size: 36px;
+    }
   }
 }
+
+
+#mc-embedded-subscribe.button {
+  margin: 0px auto;
+  display: block;
+  padding: 13px 75px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2) inset;
+  background-image: linear-gradient(-180deg, #C32D7B 0%, #B6216E 100%);
+  color: #fff;
+  letter-spacing: 2px;
+  height: 55px;
+  font-family: 'Lato', 'Helevetica', sans-serif;
+  border: none;
+}
+
+#mc-embedded-subscribe.button:hover {
+  background-image: linear-gradient(-180deg, #ae286e 0%, #a01d61 100%);
+}
+
+#mc-embedded-subscribe.button.small {
+  padding: 15px;
+}
+
+.mc-field-group {
+  width: 500px;
+  margin: 0px auto;
+
+  color: $dark-gray;
+
+  .mc-label-group {
+    display: block;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-weight: $bold-format;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+
+    .indicates-required {
+      color: $violet;
+    }
+  }
+
+  input {
+    width: inherit;
+    line-height: 50px;
+    padding-left: 10px;
+
+    border-radius: 5px;
+    border: 1px solid $gray;
+
+    text-transform: none;
+    font-size: $regular-font-size;
+    color: $dark-gray;
+
+    &:focus {
+      color: $dark-gray;
+    }
+
+    @media only screen and (max-width: 1280px) {
+      line-height: 36px;
+      font-size: 14px;
+    }
+  }
+
+  input.mce_inline_error {
+    border-color: $violet;
+  }
+
+  div.mce_inline_error {
+    background-color: $white;
+    color: $violet;
+
+    font-weight: $bold-format;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    border-color: $violet;
+
+  }
+
+}
+
+
+
+
+
+
