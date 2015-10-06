@@ -27,3 +27,9 @@
     }
   }
 }
+
+li, a, img {
+  &:focus {
+    outline: none;
+  }
+}
