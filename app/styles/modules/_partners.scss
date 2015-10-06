@@ -8,11 +8,11 @@
       height: 68px;
       background: url('../assets/partners/wri-big.png') no-repeat;
     }
-    h2 {
-      margin: 35px 0 65px;
-      font-size: 70px;
-      color: $light-black;
-    }
+    // h2 {
+    //   margin: 35px 0 65px;
+    //   font-size: 70px;
+    //   color: $light-black;
+    // }
 
   }
 
@@ -37,6 +37,12 @@
       height: auto;
       display: flex;
     }
+
+    // li {
+    //   &:focus {
+    //     outline: none;
+    //   }
+    // }
   }
 
   li {
@@ -60,6 +66,10 @@
       margin-bottom: 25px;
       font-size: 33px;
       font-weight: $light-format;
+    }
+
+    .button {
+      margin: 0 5px;
     }
   }
 
