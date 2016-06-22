@@ -1,6 +1,6 @@
-# WRW-Splash
+# Power Watch-Splash
 
-A landing page for World Resources Watch
+A landing page for World Power Watch
 
 ## Requeriments
 
