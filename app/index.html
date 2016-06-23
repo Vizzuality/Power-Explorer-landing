@@ -35,20 +35,32 @@
       padding: 15px;
     }
     /*ADD HECTOR*/
-    #title-no-final{
+
+    #title-no-final {
       font-size: 45px;
       color: #fff;
+      font-weight: lighter;
+
     }
-    .part-platform{
-      h2{
+    #logomenu{
+      width: 300px;
+      height: 50px;
+      background: url('/assets/logo_black.svg') no-repeat center
+    }
+
+    .part-platform {
+      h2 {
         text-align: center;
         margin-bottom: 25px;
       }
-      p{
+      p {
         text-align: center;
         line-height: 32px;
         margin-top: 15px;
       }
+    }
+    .slick-slide img{
+      max-width: 200px;
     }
   </style>
 </head>
@@ -67,12 +79,10 @@
   </svg>
 
   <div class="menu unrevealed">
-    <a href="/">
-      <svg class="icon-logo">
-        <use xlink:href="#icon-logo"></use>
-      </svg>
+    <a href="/" id="logomenu">
+
     </a>
-    <a class="js-join button" href="#">join us</a>
+    <a class="button" href="#">join us</a>
   </div>
 
   <article class="article-wrapper introduction">
@@ -80,7 +90,7 @@
     <div class="row">
       <div class="large-10 medium-10 large-offset-2 medium-offset-2">
         <header>
-          <div id="title-no-final">POWERWATCH</div>
+          <div class="logo"></div>
           <!--<h1>Let's tune in to our <br> planet's signals together</h1>-->
           <p>Bringing transparency and accountability to the global power sector to
             <br> accelerate the shift to a clean energy future
@@ -88,7 +98,8 @@
         </header>
 
         <footer>
-          <a href="#" data-reveal-id="modal-join" id="join-button" class="js-join button">join us</a>
+          <!--<a href="#" data-reveal-id="modal-join" id="join-button" class="js-join button">join us</a>-->
+          <b class="button">join us</b>
           <div id="modal-join" class="reveal-modal" data-reveal aria-hidden="true">
             <!-- Begin MailChimp Signup Form -->
             <style>
@@ -194,13 +205,16 @@
           </header>
           <section>
             <p>Power Watch is working to meet that need by creating the world’s most comprehensive, open source database of global power sector data, drawing from a diversity of sources.
-</p>
+            </p>
             <p>Mapping of power plant location, plus analytical tools for emissions accounting, water use, and other climate impacts will be layered on top of the database to help users make more informed energy related decisions.</p>
-            <p>This type of access to open, accurate, and relevant information on the power sector is critically important to navigating the interplay between achieving climate, energy, and development targets at the global level, as well as making local energy investment decisions. The tools and underlying data can support companies, government officials, utilities, data analysts, and citizens, among others.</p>
-            <a href="#" id="link-signals" class="button small blue">what signals?</a>
+            <p>This type of access to open, accurate, and relevant information on the power sector is critically important to navigating the interplay between achieving climate, energy, and development targets at the global level, as well as making local
+              energy investment decisions. The tools and underlying data can support companies, government officials, utilities, data analysts, and citizens, among others.</p>
+            <!--<a href="#" id="link-signals" class="button small blue">what signals?</a>-->
           </section>
           <div class="video-container">
-            <video id="signals-video" class="invisible" src="assets/video/landscapes_1.mp4" loop></video>
+            <div class="flex-video">
+              <video id="signals-video" class="invisible" src="assets/video/landscapes_1.mp4" loop></video>
+          </div>
           </div>
           <div class="gif-container unrevealed">
             <img src="assets/video/landscapes_1.gif">
@@ -250,7 +264,8 @@
           <div class="large-6 column">
             <div class="container">
               <h2>A global data partnership</h2>
-              <p>Power Watch is made up of a partnership of research organizations, universities, non-profits, and data innovators, who are coming together with unique data and expertise to build the world’s most comprehensive, open source platform of global power systems. </p>
+              <p>Power Watch is made up of a partnership of research organizations, universities, non-profits, and data innovators, who are coming together with unique data and expertise to build the world’s most comprehensive, open source platform of global
+                power systems. </p>
               <p>Through open data, the platform and its tools will help catalyze accountability for policy makers, businesses and investors to accelerate the transition to a clean energy future while achieving development targets.</p>
             </div>
           </div>
@@ -262,72 +277,53 @@
     <div class="row">
       <div class="large-10 medium-10 large-offset-2 medium-offset-2">
         <header>
-          <h2>How can Power Watch help me?</h2>
-        </header>
+          <h2>How can Power Watch help me?</h2> </header>
         <section>
           <div class="expose-container unrevealed">
             <div id="slide-citizens" class="slide">
               <div class="large-6 columns">
-                <h3>Companies</h3>
-                <!--<strong>Apps and alerts to make sustainable decisions every day</strong>-->
-                <p>Companies and cities will be able to monitor their greenhouse gas emissions from purchased electricity more easily and more accurately.</p>
+                <h3>Citizens</h3>
+                <p>Citizens will be empowered to better understand their local power systems and demand improvements.</p>
               </div>
-              <div class="large-6 columns">
-                <img src="assets/features/citizens.jpg" alt="citizens">
-              </div>
+              <div class="large-6 columns"> <img src="assets/features/citizens.jpg" alt="ciudadanos"> </div>
             </div>
             <div id="slide-organisations" class="slide">
               <div class="large-6 columns">
-                <h3>Investors</h3>
-                <!--<strong>Tell stories that matter to galvanise support for big issues</strong>-->
-                <p>Investors will be able to incorporate water risk, emissions and other impacts into their decisions.</p>
-              </div>
-              <div class="large-6 columns">
-                <img src="assets/features/organizations.jpg" alt="organisations">
-              </div>
+                <h3>Companies</h3>
+                <p>Companies and cities will be able to monitor their greenhouse gas emissions from purchased electricity more easily and more accurately.</div>
+              <div class="large-6 columns"> <img src="assets/features/organizations.jpg" alt="organizaciones"> </div>
             </div>
             <div id="slide-governments" class="slide">
               <div class="large-6 columns">
                 <h3>Governments</h3>
-                <!--<strong>Free, accurate and timely data for the decisions that matter</strong>-->
                 <p>Governments will be able to measure the effect of power generation policies on climate, pollution, water stress, and electricity access.</p>
               </div>
-              <div class="large-6 columns">
-                <img src="assets/features/governments.jpg" alt="governments">
-              </div>
+              <div class="large-6 columns"> <img src="assets/features/governments.jpg" alt="gobiernos"> </div>
             </div>
             <div id="slide-researchers" class="slide">
               <div class="large-6 columns">
-                <h3>Citizens</h3>
-                <!--<strong>Reliable data for your analysis, models and investigations</strong>-->
-                <p>Citizens will be empowered to better understand their local power systems and demand improvements.</p>
+                <h3>Investors</h3>
+                <p>Investors will be able to incorporate water risk, emissions and other impacts into their decisions.</p>
               </div>
-              <div class="large-6 columns">
-                <img src="assets/features/researchers.jpg" alt="researchers">
-              </div>
+              <div class="large-6 columns"> <img src="assets/features/researchers.jpg" alt="investigadores"> </div>
             </div>
           </div>
-
           <ul class="features-list">
             <li class="features-item">
               <a href="" data-item="citizens">
                 <div class="features-bg citizens"></div>
               </a>
               <div class="features-info">
-                <h3><a href="#" data-item="citizens">Companies</a></h3>
-                <p>Companies and cities will be able to monitor their greenhouse gas emissions from purchased electricity more easily and more accurately.</p>
-                <a href="#" class="learn-more" data-item="citizens">learn more</a>
-              </div>
+                <h3><a href="#" data-item="citizens">Citizens</a></h3>
+                <p>Citizens will be empowered to better understand their local power systems and demand improvements.</p> <a href="#" class="learn-more" data-item="citizens">know more</a> </div>
             </li>
             <li class="features-item">
               <a href="#" data-item="organisations">
                 <div class="features-bg organisations"></div>
               </a>
               <div class="features-info">
-                <h3><a href="#" data-item="organisations">Investors</a></h3>
-                <p>Investors will be able to incorporate water risk, emissions and other impacts into their decisions.</p>
-                <a href="#" class="learn-more" data-item="organisations">learn more</a>
-              </div>
+                <h3><a href="#" data-item="organisations">Companies</a></h3>
+                <p>Companies and cities will be able to monitor their greenhouse gas emissions from purchased electricity more easily and more accurately.</p> <a href="#" class="learn-more" data-item="organisations">know more</a> </div>
             </li>
             <li class="features-item">
               <a href="#" data-item="governments">
@@ -335,54 +331,40 @@
               </a>
               <div class="features-info">
                 <h3><a href="#" data-item="governments">Governments</a></h3>
-                <p>Governments will be able to measure the effect of power generation policies on climate, pollution, water stress, and electricity access.</p>
-                <a href="#" class="learn-more" data-item="governments">learn more</a>
-              </div>
+                <p>Governments will be able to measure the effect of power generation policies on climate, pollution, water stress, and electricity access.</p> <a href="#" class="learn-more" data-item="governments">know more</a> </div>
             </li>
             <li class="features-item">
               <a href="#" data-item="researchers">
                 <div class="features-bg researchers"></div>
               </a>
               <div class="features-info">
-                <h3><a href="Researchers" data-item="researchers">Citizens</a></h3>
-                <p>Citizens will be empowered to better understand their local power systems and demand improvements.</p>
-                <a href="#" class="learn-more" data-item="researchers">learn more</a>
-              </div>
+                <h3><a href="Researchers" data-item="researchers">Investors</a></h3>
+                <p>Investors will be able to incorporate water risk, emissions and other impacts into their decisions.</p> <a href="#" class="learn-more" data-item="researchers">know more</a> </div>
             </li>
           </ul>
-
           <ul class="features-list inline unrevealed">
             <li id="item-citizens" class="features-item">
               <a href="#" class="link-feature" data-item="citizens">
                 <div class="features-bg citizens"></div>
-                <div class="features-info">
-                  <span>Companies</span>
-                </div>
+                <div class="features-info"> <span>Citizens</span> </div>
               </a>
             </li>
-
             <li id="item-organisations" class="features-item">
               <a href="#" class="link-feature" data-item="organisations">
                 <div class="features-bg organisations"></div>
-                <div class="features-info">
-                  <span>Investors</span>
-                </div>
+                <div class="features-info"> <span>Companies</span> </div>
               </a>
             </li>
             <li id="item-governments" class="features-item">
               <a href="#" class="link-feature" data-item="governments">
                 <div class="features-bg governments"></div>
-                <div class="features-info">
-                  <span>Governments</span>
-                </div>
+                <div class="features-info"> <span>Governments</span> </div>
               </a>
             </li>
             <li id="item-researchers" class="features-item">
               <a href="#" class="link-feature" data-item="researchers">
                 <div class="features-bg researchers"></div>
-                <div class="features-info">
-                  <span>Citizens</span>
-                </div>
+                <div class="features-info"> <span>Investors</span> </div>
               </a>
             </li>
           </ul>
@@ -390,82 +372,65 @@
       </div>
     </div>
   </article>
-  <article class="part-platform">
-    <h2>Part of the Resource Watch platform</h2>
-    <p>Power Watch is part of Resource Watch, an open platform that brings together data on a variety of natural resources to illuminate important trends and provide insights to those working on the frontlines of development and environmental protection.</p>
-    <p>Resource Watch combines advanced monitoring systems, satellite imagery, data, cloud computing, mobile technology, and artificial intelligence to create transparency, accessibility, and urgency around the evolving dynamics of the world’s resources.</p>
+  <article class="article-wrapper part-platform">
+    <div class="row">
+      <div class="large-10 medium-10 large-offset-2 medium-offset-2">
+        <h2>Part of the Resource Watch platform</h2>
+        <p>Power Watch is part of Resource Watch, an open platform that brings together data on a variety of natural resources to illuminate important trends and provide insights to those working on the frontlines of development and environmental protection.</p>
+        <p>Resource Watch combines advanced monitoring systems, satellite imagery, data, cloud computing, mobile technology, and artificial intelligence to create transparency, accessibility, and urgency around the evolving dynamics of the world’s resources.</p>
+      </div>
+    </div>
   </article>
-  <hr>
-  <article class="involved">
-    <h2>How can I get involved?</h2>
-    </article>
+  <article class="article-wrapper get-involved">
+    <div class="row">
+      <div class="large-10 medium-10 large-offset-2 medium-offset-2">
+        <h2>How can I get involved?</h2>
+        <a href="https://docs.google.com/forms/d/1tZXxdq4kJ8mqFFf3eKFXo0tbWOwgvLBDdB7o_zc_wxo/viewform?edit_requested=true" target="_blank" class="button blue">Sign up for Newsletter</a>
+        <a href="https://docs.google.com/forms/d/1DZwVNUZJxjm9UgFZdaZtMuBQMBa8ONzK-DU1O5Cmlu0/viewform?edit_requested=true" target="_blank" class="button blue">Become a Partner or Reviewer</a>
+      </div>
+    </div>
+  </article>
   <article class="article-wrapper partners">
     <div class="row">
       <div class="large-10 medium-10 large-offset-2 medium-offset-2">
         <header>
-          <a class="wri-logo"></a>
           <h2>Global partners </h2>
         </header>
 
         <ul id="footerCarousel">
           <li>
-            <a><img src="assets/partners/cartodb.png" alt="CartoDB" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/danida_.png" alt="DANIDA" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/descartes.png" alt="Descartes Labs" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/astrodigital@2x.png" alt="Astro Digital" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/digitalglobe.png" alt="DigitalGlobe" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/espa.png" alt="espa" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/esri.png" alt="esri" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/earth-genome.png" alt="theEARTHGenome" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/global-partnership.png" alt="Global Partnership for Sustainable Development Data" /></a>
+            <a><img src="assets/partners/wri.png" alt="World Resources Institute" /></a>
           </li>
           <li>
             <a><img src="assets/partners/google.png" alt="Google" /></a>
           </li>
           <li>
-            <a><img class="footer-partner" src="assets/partners/ministry-of-foreign-affairs-of-the-netherlands.png" alt="Ministry of Foreign Affairs of the Netherlands" /></a>
-          </li>
-          <li>
-            <a><img class="footer-partner-big" src="assets/partners/nerc.png" alt="NERC" /></a>
-          </li>
-          <li>
-            <a><img class="footer-partner-big" src="assets/partners/research-into-results.png" alt="Research Into Results" /></a>
-          </li>
-          <li>
-            <a><img class="footer-partner-big" src="assets/partners/Sida.png" alt="Sida" /></a>
-          </li>
-          <li>
-            <a><img class="footer-partner-big" src="assets/partners/tilia-fund.png" alt="Tilia Fund" /></a>
-          </li>
-          <li>
-            <a><img src="assets/partners/umd.png" alt="UMD" /></a>
-          </li>
-          <li>
-            <a><img class="footer-partner" src="assets/partners/UNDP.png" alt="UNDP" /></a>
-          </li>
-          <li>
-            <a><img class="footer-partner" src="assets/partners/university-of-edinburgh.png" alt="University of Edinburgh" /></a>
-          </li>
-          <li>
             <a><img src="assets/partners/vizzuality.png" alt="Vizzuality" /></a>
           </li>
-
+          <li>
+            <a><img src="assets/partners/ciesin.jpg" alt="Ciesin" /></a>
+          </li>
+          <li>
+            <a><img src="assets/partners/enipedia.png" alt="Enipedia" /></a>
+          </li>
+          <li>
+            <a><img src="assets/partners/fias.png" alt="FIAS" /></a>
+          </li>
+          <li>
+            <a><img src="assets/partners/global.jpg" alt="Gloabl Energy" /></a>
+          </li>
+          <li>
+            <a><img src="assets/partners/arizona-state-university.jpg" alt="Arizona state university" /></a>
+          </li>
+          <li>
+            <a><img src="assets/partners/open-system-data.png" alt="Open Power System Data" /></a>
+          </li>
+          <li>
+            <a><img src="assets/partners/ssee.jpg" alt="Smith School Of Enterprise and the Environment" /></a>
+          </li>
+          <li>
+            <a><img src="assets/partners/university-groningen.jpg" alt="University of Groningen" /></a>
+          </li>
         </ul>
 
         <footer>

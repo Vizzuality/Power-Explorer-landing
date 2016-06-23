@@ -1,0 +1,13 @@
+.get-involved {
+  text-align: center;
+  h2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+  a{
+    margin-right: 25px;
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+}
