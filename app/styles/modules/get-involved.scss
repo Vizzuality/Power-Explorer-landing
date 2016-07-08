@@ -2,12 +2,17 @@
   text-align: center;
   h2 {
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
   }
-  a{
-    margin-right: 25px;
+  a {
     &:last-child{
-      margin-right: 0px;
+      margin-top: 30px;
+    }
+    @media screen and (min-width: $medium-width-size) {
+      margin-right: 25px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
