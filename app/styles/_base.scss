@@ -24,7 +24,7 @@ body {
     }
     &.introduction,
     &.description,
-    &.signals {
+    &.signals, &.-no-padding {
       padding: 0;
     }
   }

@@ -1,5 +1,5 @@
 .partners {
-  padding: 75px 0 100px !important;
+  padding: 75px 0 100px;
   header {
     text-align: center;
     .wri-logo {
@@ -71,6 +71,10 @@
     .button {
       margin: 0 5px;
     }
+  }
+
+  .-no-padding {
+    padding: 0;
   }
 
 }
