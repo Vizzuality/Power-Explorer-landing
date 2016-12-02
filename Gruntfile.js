@@ -84,11 +84,14 @@ module.exports = function(grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       compile: {
+        // options: {
+        //   bundleExec: true,
+        //   style: 'expanded',
+        //   loadPath: ['./bower_components/foundation/scss'],
+        //   sourcemap: 'none'
+        // },
         options: {
-          bundleExec: true,
-          style: 'expanded',
-          loadPath: ['./bower_components/foundation/scss'],
-          sourcemap: 'none'
+          includePaths: ['./bower_components/foundation/scss']
         },
         files: {
           '.tmp/styles/main.css': '<%= config.app %>/styles/main.scss'
@@ -259,7 +262,6 @@ module.exports = function(grunt) {
    * command: grunt
    */
   grunt.registerTask('default', [
-    'test',
     'sass'
   ]);
 
@@ -267,7 +269,7 @@ module.exports = function(grunt) {
    * Create local server, useful to develop
    */
   grunt.registerTask('serve', [
-    //'default',
+    'default',
     'connect:server',
     'watch',
     'postcss:dev'
