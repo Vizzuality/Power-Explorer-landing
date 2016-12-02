@@ -73,28 +73,28 @@
         }
 
         &:nth-child(3) {
-          transform: translate(0, 75%);
+          transform: translate(0, 100%);
           &.moveRow {
             transform: translate(200%, 0);
           }
         }
 
         &:nth-child(4) {
-          transform: translate(100%, 75%);
+          transform: translate(100%, 100%);
           &.moveRow {
             transform: translate(300%, 0);
           }
         }
 
         &:nth-child(5) {
-          transform: translate(0, 150%);
+          transform: translate(0, 100%);
           &.moveRow {
             transform: translate(400%, 0);
           }
         }
 
         &:last-child {
-          transform: translate(100%, 150%);
+          transform: translate(100%, 100%);
           &.moveRow {
             transform: translate(500%, 0);
           }
