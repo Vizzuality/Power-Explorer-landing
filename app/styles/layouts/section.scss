@@ -1,0 +1,12 @@
+.l-section {
+  padding: 100px 1rem;
+
+  &.-even {
+    background-color: $even-bg-color;
+  }
+
+  @media screen and (min-width: $small-device) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

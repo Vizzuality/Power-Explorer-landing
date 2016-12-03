@@ -1,0 +1,14 @@
+.l-footer {
+  background-color: $footer-bg-color;
+
+  color: $inverse-font-color;
+  font-size: 14px;
+
+  p {
+    margin: 1rem 0;
+
+    > a {
+      color: $inverse-font-color;
+    }
+  }
+}

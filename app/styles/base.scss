@@ -1,0 +1,30 @@
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  color: $base-font-color;
+  font-size: 1.125rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  margin-bottom: 3rem;
+
+  color: $main-color;
+  font-weight: 300;
+  font-size: 2rem;
+
+  letter-spacing: -.03em;
+  line-height: 1.2;
+
+  @media screen and (min-width: $small-device) {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 700;
+}

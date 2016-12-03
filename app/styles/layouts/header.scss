@@ -1,0 +1,13 @@
+.l-header {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../images/bg-header.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &.-inverse {
+    color: $inverse-font-color;
+  }
+}
