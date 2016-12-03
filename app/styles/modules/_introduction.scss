@@ -10,6 +10,7 @@
     bottom: 0;
     z-index: 0;
     background: url('../assets/bg-header.jpg') no-repeat 50% 0;
+    background-size: cover;
   }
   .row {
     z-index: 1;
@@ -17,8 +18,9 @@
       text-align: center;
 
       .logo {
-        height: 148px;
+        height: 100px;
         margin: 0 auto 2%;
+        width: 350px;
         background: url('../assets/logo.svg') no-repeat center
       }
 

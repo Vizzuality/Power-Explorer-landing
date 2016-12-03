@@ -7,7 +7,7 @@
       align-items: flex-end;
       padding-top: 75px;
       .img-box {
-        width: 150%;
+        width: 175%;
         transform: translateX(-40%);
       }
 
@@ -49,4 +49,7 @@
   //     height: 530px !important;
   //   }
   // }
+  #text-description{
+        transform: translateX(20%);
+  }
 }
