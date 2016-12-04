@@ -12,4 +12,7 @@
 *.log*
 
 # Generated
-/dist
+/dist/*.html
+/dist/*.js
+/dist/*.mp4
+/dist/*.jpg

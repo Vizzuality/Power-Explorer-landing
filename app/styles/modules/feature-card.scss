@@ -1,0 +1,25 @@
+.m-feature-card {
+  margin: 2rem;
+  text-align: center;
+
+  .thumb {
+    > img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .text {
+    flex: 1;
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: $small-device) {
+    display: flex;
+    text-align: inherit;
+
+    .thumb {
+      margin-right: 1rem;
+    }
+  }
+}

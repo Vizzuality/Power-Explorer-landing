@@ -1,7 +1,11 @@
 .l-header {
   position: relative;
+  display: flex;
+  align-items: center;
+  position: relative;
   min-height: 100vh;
-  background-image: url("../images/bg-header.jpg");
+
+  background-image: url('../images/bg-header.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -10,4 +14,8 @@
   &.-inverse {
     color: $inverse-font-color;
   }
+}
+
+.l-header-content {
+  flex: 1;
 }

@@ -1,0 +1,15 @@
+.m-scroll-arrow {
+  position: absolute;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  bottom: 1rem;
+  left: 50%;
+
+  background-image: url('../images/arrow-down.svg');
+
+  opacity: 1;
+  cursor: pointer;
+  transform: translateX(-50%);
+  transition: opacity 0.116s ease-in;
+}

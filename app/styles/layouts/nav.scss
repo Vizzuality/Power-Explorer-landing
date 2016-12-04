@@ -1,0 +1,27 @@
+.l-nav {
+  position: fixed;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  transition: all 0.116 ease-in;
+
+  .button {
+    margin: 0;
+  }
+
+  @media screen and (max-width: $small-device) {
+    .button {
+      padding: 10px 15px;
+      font-size: 13px;
+    }
+  }
+
+  &.-hide {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+}

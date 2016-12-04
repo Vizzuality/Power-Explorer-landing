@@ -10,3 +10,19 @@
     padding-right: 0;
   }
 }
+
+#globalDataPartnership {
+  padding-bottom: 200px;
+
+  background-image: url('../images/tablet.png');
+  background-repeat: no-repeat;
+  background-position: 35% 100%;
+  background-size: 90% auto;
+
+  @media screen and (min-width: $small-device) {
+    padding-bottom: 50px;
+
+    background-position: -15% 100%;
+    background-size: 60% auto;
+  }
+}

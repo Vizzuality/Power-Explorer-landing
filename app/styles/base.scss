@@ -28,3 +28,14 @@ h3 {
 strong {
   font-weight: 700;
 }
+
+p.-big {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+img, a, div {
+  &:focus {
+    outline: 0;
+  }
+}

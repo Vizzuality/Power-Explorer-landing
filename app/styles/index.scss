@@ -1,3 +1,13 @@
 @import "settings", "base";
-@import "layouts/header", "layouts/section", "layouts/footer";
-@import "modules/video";
+
+@import
+  "layouts/nav",
+  "layouts/header",
+  "layouts/section",
+  "layouts/footer",
+
+  "modules/buttons",
+  "modules/video",
+  "modules/scroll-arrow",
+  "modules/slider",
+  "modules/feature-card";
