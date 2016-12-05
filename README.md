@@ -4,27 +4,14 @@ A landing page for World Power Watch
 
 ## Requeriments
 
-  * Node 0.10+
-  * sass 3.4.14
-  
+  * Node 6+
 
-Install global dependencies:
-
-  ```  bash
-  npm install -g grunt-cli bower
-  ```
-
-Install gems:
-
-  ```  bash
-  bundle install
-  ```
 
 
 ## To install
 
   ```  bash
-  npm install && bower install 
+  npm install
   ```
   
 ## Developing
@@ -32,13 +19,13 @@ Install gems:
 Unleash server (includes watch task for js and scss files):
   
   ```  bash
-  grunt serve
+  npm start
   ```
   
-For JS files:
+For build JS files:
 
   ```  bash
-  grunt test
+  npm run build
   ```
 
 Go to [http://localhost:5000](http://localhost:5000 "localhost") and have fun! :grin:
@@ -48,5 +35,5 @@ Go to [http://localhost:5000](http://localhost:5000 "localhost") and have fun! :
 Deploy to gh-pages:
   
   ```bash
-  grunt deploy
+  npm run publish
   ```
