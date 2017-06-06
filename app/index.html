@@ -150,24 +150,26 @@
 
     <section class="l-section -even">
       <div class="row align-center">
-        <div class="column small-12 medium-8">
-          <h2>Founding partners</h2>
-          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
+        <div class="column small-12 medium-8 small-centered">
+          <h2 class="text-center">Founding partners</h2>
+          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "centerMode": true}'>
             <div><img src="<%= require('./images/partners/wri.png') %>" alt="World Resources Institute"/></div>
             <div><img src="<%= require('./images/partners/google.png') %>" alt="Google"/></div>
           </div>
         </div>
-        <div class="column small-12 medium-4">
-          <h2>Funders</h2>
-          <div class="m-slider" data-slick='{"slidesToShow": 1, "slidesToScroll": 1}'>
+        <div class="column small-12 medium-8 small-centered">
+          <h2 class="text-center">Research Partners</h2>
+          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "centerMode": true}'>
+            <div><img src="<%= require('./images/partners/kth-stockholm.png') %>" alt="KTH Stockholm"/></div>
+            <div><img src="<%= require('./images/partners/global.jpg') %>" alt="Global Energy Observatory"/></div>
+          </div>
+        </div>
+        <div class="column small-12 medium-8 small-centered">
+          <h2 class="text-center">Funders</h2>
+          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "variableWidth": true, "centerMode": true}'>
             <div><img src="<%= require('./images/partners/google.png') %>" alt="Google"/></div>
           </div>
         </div>
-        <!--
-        <div class="column small-12">
-          <h2>Research Partners</h2>
-        </div>
-        -->
         <div class="column small-12">
           <p class="-big text-center">See yourself as part of this team?</p>
           <p class="text-center"><a href="mailto:powerwatch@wri.org" class="button">Get in touch via email!</a></p>
