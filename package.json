@@ -1,7 +1,7 @@
 {
   "name": "power-watch-landing",
-  "version": "1.0.0",
-  "description": "A landing page for World Power Watch",
+  "version": "1.1.2",
+  "description": "A landing page for Power Watch",
   "main": "app/index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --progress --colors",
