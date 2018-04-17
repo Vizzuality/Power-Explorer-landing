@@ -1,4 +1,4 @@
-import 'foundation-sites/dist/css/foundation-flex.css';
+import 'foundation-sites/dist/foundation-flex.css';
 import 'slick-carousel/slick/slick.css';
 import './styles/index.scss';
 

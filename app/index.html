@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Global Power Watch</title>
+    <title>Power Watch</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
@@ -27,7 +27,7 @@
         <div class="row align-center">
           <div class="column small-12 medium-8">
             <h1 class="text-center"><img src="<%= require('./images/logo.svg') %>" width="350" height="100"></h1>
-            <p class="text-center">Bringing transparency and accountability to the global power sector to <br> accelerate the shift to a clean energy future</p>
+            <p class="text-center">Global Power Data For Shaping Our Energy Future</p>
             <p class="text-center"><a href="#join" class="button">Join us</a></p>
           </div>
         </div>
@@ -41,14 +41,22 @@
           <article>
             <div class="row align-center">
               <div class="column small-12">
-                <h2 class="text-center">Decision makers across the economy need access to comprehensive, accurate, <br> and relevant data to make informed energy decisions.</h2>
+                <h2 class="text-center">WRI and partners are developing Power Watch to fill the need for better power sector data</h2>
               </div>
             </div>
             <div class="row align-center">
               <div class="column small-12 medium-8">
-                <p>Power Watch is working to meet that need by creating the world’s most comprehensive, open source database of the global power sector.</p>
-                <p>Mapping of power plant location, plus analytical tools for emissions accounting, water use, and other climate impacts will be layered on top of the database to help users make more informed energy related decisions.</p>
-                <p>This type is critically important to navigating the interplay between achieving climate, energy, and development targets at the global level, as well as making local energy investment decisions. The tools and underlying data can support companies, government officials, utilities, data analysts, and citizens, among others.</p>
+                <p>
+                Today&apos;s lack of transparent, accessible and centralized power sector data seriously inhibits the ability to conduct reliable research and solve problems in the global power sector.
+                Consequently, information gaps for citizens, analysts, and decision-makers worldwide create barriers to sustainable power sector development efforts.
+                </p>
+
+                <p>
+                Power Watch, to be launched in 2018, will meet that need by bringing together extensive data sets and visualizations that enable you to explore the current state of the power sector at global, national, and individual power plant level.
+                The platform will contain information on all types of power generation, regardless of fuel type, from large-scale traditional power plants to distributed renewables to energy storage.
+                By tracking all forms of power generation and providing centralized data and visualizations, Power Watch will show structural shifts to clean energy in the power sector over time, identifying patterns and pathways toward a more sustainable and energy-secure future.
+                </p>
+
               </div>
             </div>
             <div class="row align-center">
@@ -61,13 +69,36 @@
       </div>
     </section>
 
-    <section class="l-section -even" id="globalDataPartnership">
-      <div class="row align-right">
-        <div class="column small-12 medium-5">
+    <section class="l-section -even">
+      <div class="row">
+        <div class="column small-12">
           <article>
-            <h2>A global data partnership</h2>
-            <p><strong>Power Watch</strong> is made up of a partnership of research organizations, universities, non-profits, and data innovators, who are coming together with unique data and expertise to build the world’s most comprehensive, open source platform of global power systems.</p>
-            <p>Through open data, the platform and its tools will help catalyze accountability for policy makers, businesses and investors to accelerate the transition to a clean energy future while achieving development targets.</p>
+            <div class="row align-center">
+              <div class="column small-12">
+                <h2 class="text-center">An Open and Global Database of the World&apos;s Power Plants</h2>
+              </div>
+            </div>
+
+            <div class="row align-center">
+              <div class="column small-12 medium-8">
+                <p>
+                Power Watch will serve as the most comprehensive source for understanding the world&apos;s power systems and their impacts on development and environmental challenges.
+                The platform and its insights come from the <a href="http://datasets.wri.org/dataset/globalpowerplantdatabase">Global Power Plant Database</a>, an open source database of the world&apos;s power plants released in April 2018.
+                </p>
+
+                <p>
+                Power plants featured in the Global Power Plant Database contain the latest information on their capacity, electrical generation, fuel type, commissioning year, exact location, and ownership.
+                Future iterations of the platform will include much more data on power plant technology, carbon dioxide emissions, water use, and release of air pollutants.
+                We also aim to build tools based on these data to inform a wide array of stakeholder on the environmental impacts from the power sector.
+                The dataset will also pull from other WRI projects to allow overlays of power plant data with other data layers like water stress, sea level rise, etc.
+                </p>
+              </div>
+            <div class="row align-center">
+              <div class="column small-12">
+                <video loop muted autoplay poster="<%= require('./videos/gppd_ZAF_small.mp4') %>">
+                  <source src="<%= require('./videos/gppd_ZAF_small.mp4') %>" type="video/mp4">
+                </video>
+            </div>
           </article>
         </div>
       </div>
@@ -84,19 +115,10 @@
               <img src="<%= require('./images/icon-citizens.svg') %>" alt="Citizens">
             </div>
             <div class="text">
-              <h3>Citizens</h3>
-              <p>Citizens will be empowered to better understand their local power systems and demand improvements.</p>
-            </div>
-          </article>
-        </div>
-        <div class="column small-12 medium-6">
-          <article class="m-feature-card">
-            <div class="thumb">
-              <img src="<%= require('./images/icon-organisations.svg') %>" alt="Companies">
-            </div>
-            <div class="text">
-              <h3>Companies</h3>
-              <p>Companies and cities will be able to monitor their greenhouse gas emissions from purchased electricity more easily and more accurately.</p>
+              <h3>Nonprofits and Citizens</h3>
+              <p>
+              Citizens will gain greater understanding of their local power systems and will be enabled and empowered to demand improvements to benefit their communities and environment.
+              </p>
             </div>
           </article>
         </div>
@@ -106,8 +128,11 @@
               <img src="<%= require('./images/icon-governments.svg') %>" alt="Governments">
             </div>
             <div class="text">
-              <h3>Governments</h3>
-              <p>Governments will be able to measure the effect of power generation policies on climate, pollution, water stress, and electricity access.</p>
+              <h3>Research Organizations</h3>
+              <p>
+              Academics, modelers and policy researchers can use the open data featured on Power Watch to devise their own analyses.
+              Open licensing will permit researchers to build upon the data with free rights to republish.
+              </p>
             </div>
           </article>
 
@@ -115,11 +140,26 @@
         <div class="column small-12 medium-6">
           <article class="m-feature-card">
             <div class="thumb">
+              <img src="<%= require('./images/icon-organisations.svg') %>" alt="Companies">
+            </div>
+            <div class="text">
+              <h3>Companies</h3>
+              <p>
+              Companies and cities will understand the impact from their purchased electricity on climate change and water stress, inspiring action to set reduction goals and limit the environmental impact from their business operations.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="column small-12 medium-6">
+          <article class="m-feature-card">
+            <div class="thumb">
               <img src="<%= require('./images/icon-researchers.svg') %>" alt="Investors">
             </div>
             <div class="text">
-              <h3>Investors</h3>
-              <p>Investors will be able to incorporate water risk, emissions and other impacts into their decisions.</p>
+              <h3>Investors and International Organizations</h3>
+              <p>
+              Public and private investors will understand water risk, emissions and other impacts from power plants on the environment to enable more informed decision-making.
+              </p>
             </div>
           </article>
         </div>
@@ -130,9 +170,19 @@
       <div class="row align-center">
         <div class="column small-12 medium-8">
           <h2 class="text-center">Part of the Resource Watch platform</h2>
-          <p class="text-center">Power Watch is part of Resource Watch, an open platform that brings together data on a variety of natural resources to illuminate important trends and provide insights to those working on the frontlines of development and environmental protection.</p>
-          <p class="text-center">Resource Watch combines advanced monitoring systems, satellite imagery, data, cloud computing, mobile technology, and artificial intelligence to create transparency, accessibility, and urgency around the evolving dynamics of the world’s resources.</p>
+          <p>
+          Power Explorer is part of the <a href="https://resourcewatch.org">Resource Watch</a> family, a dynamic platform that leverages technology, data, and human networks to enable unprecedented transparency about the planet right now.
+          You can already <a href="https://resourcewatch.org/data/explore?zoom=3&lat=0&lng=0&basemap=dark&labels=light&layers=%255B%257B%2522dataset%2522%253A%2522a86d906d-9862-4783-9e30-cdb68cd808b8%2522%252C%2522opacity%2522%253A1%252C%2522visible%2522%253Atrue%252C%2522layer%2522%253A%25222a694289-fec9-4bfe-a6d2-56c3864ec349%2522%257D%255D&page=1&sort=most-viewed&sortDirection=-1&search=power%20">explore the Global Power Plant Database on Resource Watch</a> and combine it with over 100 different data layers (for example, vulnerability to water-stressed areas) to make your own analysis and <a href="http://www.wri.org/blog/2018/04/water-stress-threatens-nearly-half-world-s-thermal-power-plant-capacity">tell your stories</a>.
+          </p>
+
+          <p>
+          Resource Watch combines advanced monitoring systems, satellite imagery, data, cloud computing, mobile technology and artificial intelligence to create transparency, accessibility and urgency around the evolving dynamics of the world&apos;s resources.
+
+          </p>
         </div>
+        <iframe src="https://resourcewatch.org/embed/data/explore?zoom=2&lat=35.2&lng=14.6&basemap=terrain&labels=none&layers=%255B%257B%2522dataset%2522%253A%2522a86d906d-9862-4783-9e30-cdb68cd808b8%2522%252C%2522opacity%2522%253A1%252C%2522visible%2522%253Atrue%252C%2522layer%2522%253A%25222a694289-fec9-4bfe-a6d2-56c3864ec349%2522%257D%252C%257B%2522dataset%2522%253A%2522d7c3d954-ac86-4d1a-bb6a-c8c432a94e26%2522%252C%2522opacity%2522%253A0.46%252C%2522visible%2522%253Atrue%252C%2522layer%2522%253A%25222db606de-49d9-49d4-a6ef-6f45b6d0cf04%2522%257D%255D&page=2&sort=most-viewed&sortDirection=-1&search=water%20stress" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
+
+        </iframe>
       </div>
     </section>
 
@@ -142,7 +192,7 @@
           <h2 class="text-center">How can I get involved?</h2>
           <div class="text-center">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeEBpJurlrxxndIm_TC3cxGiKGdV3S2YwiUjdnuCGuNd1NCsA/viewform" class="secondary button">Sign up for newsletter</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmJXF2Da8Gj3ttc0WFRkXV2ZpwwafKPPGQx_Mpu4BGWufWlQ/viewform" class="secondary button">Become a partner or reviewer</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmJXF2Da8Gj3ttc0WFRkXV2ZpwwafKPPGQx_Mpu4BGWufWlQ/viewform" class="secondary button">Become a research partner</a>
           </div>
         </div>
       </div>
@@ -152,23 +202,30 @@
       <div class="row align-center">
         <div class="column small-12 medium-8 small-centered">
           <h2 class="text-center">Founding partners</h2>
-          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "centerMode": true}'>
+          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
             <div><img src="<%= require('./images/partners/wri.png') %>" alt="World Resources Institute"/></div>
             <div><img src="<%= require('./images/partners/google.png') %>" alt="Google"/></div>
           </div>
         </div>
         <div class="column small-12 medium-8 small-centered">
           <h2 class="text-center">Research Partners</h2>
-          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "centerMode": true}'>
+          <div class="m-slider" data-slick='{"autoplay": true, "autoplaySpeed": 1000, "speed":1500, "slidesToShow": 3, "slidesToScroll": 3, "centerMode": true, "variableWidth": true, "arrows": false, "draggable": true}'>
             <div><img src="<%= require('./images/partners/kth-stockholm.png') %>" alt="KTH Stockholm"/></div>
+            <div><img src="<%= require('./images/partners/kayrros.png') %>" alt="Kayrros"/></div>
             <div><img src="<%= require('./images/partners/global.jpg') %>" alt="Global Energy Observatory"/></div>
-            <div><img src="<%= require('./images/partners/university-groningen.png') %>" alt="University of Groningen"/></div>
+            <div><img src="<%= require('./images/partners/university-groningen-small.png') %>" alt="University of Groningen"/></div>
+            <div><img src="<%= require('./images/partners/duke-energy-initiative.png') %>" alt="Duke Energy Initiative"/></div>
+            <div><img src="<%= require('./images/partners/ibm.svg') %>" width="250" height="100" alt="IBM"/></div>
+            <div><img src="<%= require('./images/partners/ssee.png') %>" alt="University of Oxford"/></div>
+            <div><img src="<%= require('./images/partners/rafael-landivar.png') %>" alt="Universidad Rafael Landivar"/></div>
+            <div><img src="<%= require('./images/partners/open-system-data-small.png') %>" alt="Open Power System Data"/></div>
           </div>
         </div>
         <div class="column small-12 medium-8 small-centered">
           <h2 class="text-center">Funders</h2>
-          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "variableWidth": true, "centerMode": true}'>
+          <div class="m-slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 2, "variableWidth": false}'>
             <div><img src="<%= require('./images/partners/google.png') %>" alt="Google"/></div>
+            <div><img src="<%= require('./images/partners/swiss-foen.jpg') %>" alt="Swiss Federal Office of the Environment"/></div>
           </div>
         </div>
         <div class="column small-12">
