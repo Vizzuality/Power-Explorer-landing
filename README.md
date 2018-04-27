@@ -1,6 +1,6 @@
-# Power Watch-Splash
+# Power-Explorer-landing
 
-A landing page for World Power Watch
+A landing page for Power Explorer
 
 ## Requeriments
 
